@@ -1,0 +1,315 @@
+/* Typography & Color Theme */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfdfb;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #2e7d32;
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: #2e7d32;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #81c784;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #2e7d32;
+    padding: 1em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+
+nav li a {
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Main Content */
+main {
+    padding: 2em;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5em;
+}
+
+.highlight {
+    color: #81c784;
+}
+
+/* Image Styling */
+img {
+    margin: 1.5em 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tagline */
+.tagline {
+    font-size: 1.4em;
+    font-style: italic;
+    color: #4caf50;
+    margin-bottom: 2em;
+}
+
+/* Mission Paragraph */
+.mission {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    background-color: #dcedc8;
+    padding: 2em;
+    text-align: center;
+    font-size: 0.95em;
+    color: #333;
+    border-top: 4px solid #81c784;
+}
+
+footer .quote {
+    font-style: italic;
+    margin-bottom: 1em;
+    color: #2e7d32;
+}
+body {
+    background: url('Textures/pergamino-light.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #2e2e2e;
+}
+/* Additional styles for fie-sims.html */
+
+.subtagline {
+    font-size: 1rem;
+    font-style: italic;
+    color: #81c784;
+    margin-top: -10px;
+}
+
+.sim-table {
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 2em;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.sim-table th,
+.sim-table td {
+    padding: 1em;
+    text-align: center;
+    border: 1px solid #81c784;
+}
+
+.table-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #2e7d32;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.table-button:hover {
+    background-color: #66bb6a;
+}
+.title-banner {
+    background-color: #dcedc8; /* verde muy claro */
+    padding: 1em 2em;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.title-banner h1 {
+    margin: 0;
+    color: #2e7d32;
+    font-size: 2.5em;
+}
+.title-banner-full {
+    background-color: #dcedc8;
+    padding: 1em 0;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+}
+
+.title-banner-full h1 {
+    margin: 0;
+    color: #2e7d32;
+    font-size: 2.8em;
+}
+.with-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.logo-banner {
+    height: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+.tagline {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #2e7d32;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1);
+}
+
+.tag-icon {
+    height: 36px;
+    width: auto;
+    vertical-align: middle;
+    border-radius: 6px;
+}
+.table-section {
+    background-image: url('icons/pergamino-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 2em auto;
+    max-width: 1000px;
+}
+.power-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 700px;
+    margin: auto;
+}
+
+.power-list li {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.05em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease;
+}
+
+.power-list li:hover {
+    background-color: #f3f3e8;
+    cursor: default;
+}
+.data-drop-connect {
+    text-align: center;
+    background-color: #f3f0e2;
+    border-radius: 10px;
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 800px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.data-drop-connect h2 {
+    color: #2e7d32;
+    margin-bottom: 0.5em;
+}
+
+.data-drop-button {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.data-drop-button:hover {
+    background-color: #66bb6a;
+}
+.back-link {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.back-link a {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #2e7d32;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    background-color: #e8f5e9;
+    transition: background-color 0.3s ease;
+}
+
+.back-link a:hover {
+    background-color: #c8e6c9;
+}
+.forward-link {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 0.95em;
+  color: #2e7d32;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forward-link:hover {
+  color: #66bb6a;
+}
+.tag {
+  display: inline-block;
+  padding: 2px 6px;
+  margin-left: 6px;
+  border-radius: 6px;
+  font-size: 10px;
+  color: white;
+}
+
+.tag-gis {
+  background-color: #4caf50; /* green */
+}
+
+.tag-manual {
+  background-color: #2196f3; /* blue */
+}
