@@ -4,11 +4,11 @@ on:
   workflow_dispatch:   # 👈 allows manual trigger from the Actions tab
   push:
     paths:
-      - 'exercise-repo/**'
+      - 'exercises-repo/**'
       - '.github/workflows/validate-exercises.yml'
   pull_request:
     paths:
-      - 'exercise-repo/**'
+      - 'exercises-repo/**'
       - '.github/workflows/validate-exercises.yml'
 
 jobs:
@@ -32,11 +32,11 @@ jobs:
       - name: Run validator
         run: |
           set -o pipefail
-          python exercise-repo/validate_exercises.py exercise-repo/exercises.json | tee exercise-repo/validation_summary.txt
+          python exercises-repo/validate_exercises.py exercises-repo/exercises.json | tee exercises-repo/validation_summary.txt
 
       - name: Upload validation report (artifact)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: validation-logs
-          path: exercise-repo/validation_summary.txt
+          path: exercises-repo/validation_summary.txt
