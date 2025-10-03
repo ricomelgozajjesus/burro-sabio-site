@@ -1,6 +1,7 @@
 name: Validate Exercises
 
 on:
+  workflow_dispatch:   # 👈 allows manual trigger from the Actions tab
   push:
     paths:
       - 'exercise-repo/**'
