@@ -255,3 +255,182 @@ exercises:
       author: 'J. J. Rico (Magic Notebooks código)'
       created: '2025-10-04'
       updated: '2025-10-04'
+  - id: stewart-3_1-005
+    topic: Derivadas
+    subtopic: Funciones polinomiales y exponenciales
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$f(x) = 5.2x + 2.3$$
+    answer_type: symbolic
+    expected_answer: '5.2'
+    accepted_equivalents: []
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Proceso, points: 4, description: 'Usa regla de la potencia/linealidad'}
+        - {name: Resultado, points: 4, description: 'Valor correcto de la derivada'}
+        - {name: Presentación, points: 2, description: 'Notación clara'}
+    hints:
+      - 'La derivada de $ax+b$ es $a$.'
+    tags: [textbook, Stewart, 3.1, derivadas, lineal]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '5.2'
+      domain: 'all real x'
+    meta:
+      source: 'Stewart Cálculo, Sección 3.1 (Ejs. 3–32)'
+      author: 'Curación: J. J. Rico'
+      created: '2025-10-04'
+      updated: '2025-10-04'
+
+  - id: stewart-3_1-006
+    topic: Derivadas
+    subtopic: Funciones polinomiales y exponenciales
+    difficulty: medium
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$t(x) = \frac{7}{4x^{2} - 3x + 12}$$
+    answer_type: symbolic
+    expected_answer: '-\dfrac{7(8x-3)}{(4x^{2}-3x+12)^{2}}'
+    accepted_equivalents: []
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Cociente/cadena, points: 6, description: 'Diferencia $g(x)=(4x^2-3x+12)^{-1}$ correctamente'}
+        - {name: Simplificación, points: 2, description: 'Factoriza $8x-3$ y potencia del denominador'}
+        - {name: Presentación, points: 2, description: 'Notación clara'}
+    hints:
+      - 'Escriba $t(x)=7(4x^2-3x+12)^{-1}$ y use la regla de la cadena.'
+    tags: [textbook, Stewart, 3.1, derivadas, racional]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '-7*(8*x-3)/(4*x**2-3*x+12)**2'
+      domain: 'x \in \mathbb{R}'
+    meta:
+      source: 'Stewart Cálculo, Sección 3.1 (Ejs. 3–32)'
+      author: 'Curación: J. J. Rico'
+      created: '2025-10-04'
+      updated: '2025-10-04'
+
+  - id: stewart-3_1-007
+    topic: Derivadas
+    subtopic: Polinomios (en t)
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$f(t) = 2t^{3} - 3t^{2} - 4t$$
+    answer_type: symbolic
+    expected_answer: '6t^{2} - 6t - 4'
+    accepted_equivalents: []
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Regla de la potencia, points: 6, description: 'Aplica a cada término'}
+        - {name: Simplificación, points: 2, description: 'Combina términos'}
+        - {name: Presentación, points: 2, description: 'Notación clara'}
+    hints:
+      - 'Use $(t^n)^\prime = n t^{n-1}$.'
+    tags: [textbook, Stewart, 3.1, polinomio]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '6*t**2 - 6*t - 4'
+      domain: 'all real t'
+    meta:
+      source: 'Stewart Cálculo, Sección 3.1 (Ejs. 3–32)'
+      author: 'Curación: J. J. Rico'
+      created: '2025-10-04'
+      updated: '2025-10-04'
+
+  - id: stewart-3_1-008
+    topic: Derivadas
+    subtopic: Polinomios (en t)
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$f(t) = 1.4\,t^{5} - 2.5\,t^{2} + 6.7$$
+    answer_type: symbolic
+    expected_answer: '7.0\,t^{4} - 5.0\,t'
+    accepted_equivalents: []
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Regla de la potencia, points: 6, description: 'Aplica a cada término'}
+        - {name: Constantes, points: 2, description: 'La derivada de una constante es 0'}
+        - {name: Presentación, points: 2, description: 'Notación clara'}
+    hints:
+      - '$(at^n)^\prime = a\,n\,t^{n-1}$; $(\text{constante})^\prime = 0$.'
+    tags: [textbook, Stewart, 3.1, polinomio]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '7.0*t**4 - 5.0*t'
+      domain: 'all real t'
+    meta:
+      source: 'Stewart Cálculo, Sección 3.1 (Ejs. 3–32)'
+      author: 'Curación: J. J. Rico'
+      created: '2025-10-04'
+      updated: '2025-10-04'
+
+  - id: stewart-3_1-009
+    topic: Derivadas
+    subtopic: Producto de polinomios
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$t(x) = x^{2}\,(1 - 2x)$$
+    answer_type: symbolic
+    expected_answer: '2x - 6x^{2}'
+    accepted_equivalents: ['-6x^{2} + 2x']
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Producto, points: 6, description: 'Aplica $(fg)^\prime=f^\prime g+fg^\prime$'}
+        - {name: Simplificación, points: 2, description: 'Combina términos'}
+        - {name: Presentación, points: 2, description: 'Notación clara'}
+    hints:
+      - 'Puede expandir o usar la regla del producto.'
+    tags: [textbook, Stewart, 3.1, producto]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '2*x - 6*x**2'
+      domain: 'all real x'
+    meta:
+      source: 'Stewart Cálculo, Sección 3.1 (Ejs. 3–32)'
+      author: 'Curación: J. J. Rico'
+      created: '2025-10-04'
+      updated: '2025-10-04'
+
+  - id: stewart-3_1-010
+    topic: Derivadas
+    subtopic: Producto de polinomios (en u)
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$H(u) = (3u^{2} + 1)\,(u + 2)$$
+    answer_type: symbolic
+    expected_answer: '9u^{2} + 12u + 1'
+    accepted_equivalents: []
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Producto, points: 6, description: '$(fg)^\prime=f^\prime g+fg^\prime$ con $f=3u^2+1$, $g=u+2$'}
+        - {name: Simplificación, points: 2, description: 'Combina y ordena términos'}
+        - {name: Presentación, points: 2, description: 'Notación clara'}
+    hints:
+      - 'Diferencie $3u^2+1$ y $u+2$ por separado y aplique la regla del producto.'
+    tags: [textbook, Stewart, 3.1, producto]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '9*u**2 + 12*u + 1'
+      domain: 'all real u'
+    meta:
+      source: 'Stewart Cálculo, Sección 3.1 (Ejs. 3–32)'
+      author: 'Curación: J. J. Rico'
+      created: '2025-10-04'
+      updated: '2025-10-04'
