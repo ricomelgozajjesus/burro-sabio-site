@@ -199,3 +199,30 @@ exercises:
       reference_expr: 'exp(x)*(1+x) + 2/x'
       domain: 'x != 0'
     meta: { author: BS, created: 2025-10-03, updated: 2025-10-03 }
+
+- id: stewart-3_1-003
+  topic: Derivadas
+  subtopic: Funciones polinomiales y exponenciales
+  difficulty: easy
+  format: open-ended
+  statement_md_es: |
+    Derive la función:
+    $$f(x) = 6.5$$
+  answer_type: symbolic
+  expected_answer: '0'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Regla de la potencia, points: 5, description: 'Reconoce que la derivada de una constante es 0'}
+      - {name: Presentación, points: 5, description: 'Expresión clara y ordenada'}
+  hints:
+    - 'Recuerde: la derivada de una constante es 0.'
+  tags: [textbook, Stewart, 3.1, derivadas]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: '0'
+    domain: 'all real x'
+  meta:
+    source: 'Stewart Cálculo, Sección 3.1'
+    author: 'J. J. Rico (Magic Notebooks código)'
+    created: '2025-10-04'
