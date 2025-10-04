@@ -1,6 +1,7 @@
-version: "0.2"
-collection: "Burro-Sabio Magic Notebooks — Calculus I: Reglas de Derivación"
-license: "CC BY-NC 4.0"
+version: '0.2'
+collection: 'Burro-Sabio Magic Notebooks — Calculus I: Reglas de Derivación'
+license: 'CC BY-NC 4.0'
+
 schema:
   id: string (unique)
   topic: e.g., Derivatives
@@ -49,28 +50,28 @@ exercises:
     statement_md_es: |
       Calcula
       $$\frac{d}{dx} \big[ x^{2} \sin x \big].$$
-    statement_md_en: "Compute $\frac{d}{dx}[x^2 \sin x]$."
+    statement_md_en: 'Compute $\frac{d}{dx}[x^2 \sin x]$.'
     answer_type: symbolic
-    expected_answer: "2x\sin x + x^{2}\cos x"
-    accepted_equivalents: ["x^{2}\cos x + 2x\sin x"]
+    expected_answer: '2x\sin x + x^{2}\cos x'
+    accepted_equivalents: ['x^{2}\cos x + 2x\sin x']
     rubric:
       total_points: 10
       criteria:
-        - {name: Regla del producto, points: 4, description: "Aplica (fg)' = f'g + fg'"}
-        - {name: Derivadas básicas, points: 4, description: "d/dx[x^2]=2x, d/dx[\sin x]=\cos x"}
-        - {name: Presentación, points: 2, description: "Orden/LaTeX"}
+        - { name: 'Regla del producto', points: 4, description: 'Aplica (fg)'' = f''g + fg''' }
+        - { name: 'Derivadas básicas', points: 4, description: 'd/dx[x^2]=2x, d/dx[\sin x]=\cos x' }
+        - { name: 'Presentación', points: 2, description: 'Orden/LaTeX' }
     hints:
-      - "Recuerda (fg)' = f'g + fg'"
-      - "d/dx[x^2]=2x y d/dx[\sin x]=\cos x"
+      - 'Recuerda (fg)'' = f''g + fg'''
+      - 'd/dx[x^2]=2x y d/dx[\sin x]=\cos x'
     solution_steps_md_es: |
       Sea $f(x)=x^2$ y $g(x)=\sin x$. Entonces $f'(x)=2x$ y $g'(x)=\cos x$. Por la regla del producto,
       $$(fg)'=f'g+fg' = 2x\sin x + x^2\cos x.$$
     tags: [product-rule, trig]
     autocheck:
       strategy: symbolic_equivalence
-      reference_expr: "2*x*sin(x)+x**2*cos(x)"
+      reference_expr: '2*x*sin(x)+x**2*cos(x)'
       domain: all real x
-    meta: {author: BS, created: 2025-10-03, updated: 2025-10-03}
+    meta: { author: BS, created: 2025-10-03, updated: 2025-10-03 }
 
   - id: der-quot-002
     topic: Derivatives
@@ -80,113 +81,113 @@ exercises:
     statement_md_es: |
       Calcula
       $$\frac{d}{dx} \left[ \frac{3x^{2}-5}{x+1} \right].$$
-    statement_md_en: "Compute $\dfrac{d}{dx}\left[ \frac{3x^2-5}{x+1} \right]$."
+    statement_md_en: 'Compute $\dfrac{d}{dx}\left[ \frac{3x^2-5}{x+1} \right]$.'
     answer_type: symbolic
-    expected_answer: "\dfrac{3x^{2}+6x+5}{(x+1)^{2}}"
-    accepted_equivalents: ["\dfrac{6x(x+1)-(3x^{2}-5)}{(x+1)^{2}}"]
+    expected_answer: '\dfrac{3x^{2}+6x+5}{(x+1)^{2}}'
+    accepted_equivalents: ['\dfrac{6x(x+1)-(3x^{2}-5)}{(x+1)^{2}}']
     rubric:
       total_points: 10
       criteria:
-        - {name: Regla del cociente, points: 4, description: "(u/v)' = (u'v - uv')/v^2"}
-        - {name: Simplificación, points: 4, description: "Algebra correcta al combinar términos"}
-        - {name: Presentación, points: 2, description: "Notación/LaTeX"}
+        - { name: 'Regla del cociente', points: 4, description: '(u/v)'' = (u''v - uv'')/v^2' }
+        - { name: 'Simplificación', points: 4, description: 'Algebra correcta al combinar términos' }
+        - { name: 'Presentación', points: 2, description: 'Notación/LaTeX' }
     hints:
-      - "Identifica $u=3x^2-5$, $v=x+1$"
-      - "Calcula $u'=6x$, $v'=1$ y aplica (u/v)'"
+      - 'Identifica $u=3x^2-5$, $v=x+1$'
+      - 'Calcula $u''=6x$, $v''=1$ y aplica (u/v)'''
     solution_steps_md_es: |
       Con $u=3x^2-5$, $v=x+1$, se tiene $u'=6x$, $v'=1$. Entonces
       $$(u/v)'=\frac{u'v-uv'}{v^{2}}=\frac{6x(x+1)-(3x^{2}-5)}{(x+1)^2}=\frac{3x^{2}+6x+5}{(x+1)^{2}}.$$
     tags: [quotient-rule, algebra]
     autocheck:
       strategy: symbolic_equivalence
-      reference_expr: "(3*x**2+6*x+5)/(x+1)**2"
-      domain: "x != -1"
-    meta: {author: BS, created: 2025-10-03, updated: 2025-10-03}
+      reference_expr: '(3*x**2+6*x+5)/(x+1)**2'
+      domain: 'x != -1'
+    meta: { author: BS, created: 2025-10-03, updated: 2025-10-03 }
 
   - id: der-chain-003
     topic: Derivatives
-    subtopic: Chain Rule (trig)
+    subtopic: 'Chain Rule (trig)'
     difficulty: easy
     format: open-ended
     statement_md_es: |
       Calcula
       $$\frac{d}{dx} \big[ \sin(2x^{3}) \big].$$
-    statement_md_en: "Compute $\dfrac{d}{dx}[\sin(2x^3)]$."
+    statement_md_en: 'Compute $\dfrac{d}{dx}[\sin(2x^3)]$.'
     answer_type: symbolic
-    expected_answer: "6x^{2}\cos(2x^{3})"
-    accepted_equivalents: ["\cos(2x^{3})\cdot 6x^{2}"]
+    expected_answer: '6x^{2}\cos(2x^{3})'
+    accepted_equivalents: ['\cos(2x^{3})\cdot 6x^{2}']
     rubric:
       total_points: 10
       criteria:
-        - {name: Regla de la cadena, points: 5, description: "d/dx[sin(u)] = cos(u)u'"}
-        - {name: Derivada interna, points: 3, description: "u=2x^3 → u'=6x^2"}
-        - {name: Presentación, points: 2, description: "Notación/LaTeX"}
+        - { name: 'Regla de la cadena', points: 5, description: 'd/dx[sin(u)] = cos(u)u''' }
+        - { name: 'Derivada interna', points: 3, description: 'u=2x^3 → u''=6x^2' }
+        - { name: 'Presentación', points: 2, description: 'Notación/LaTeX' }
     hints:
-      - "Toma $u=2x^3$"
-      - "d/dx[\sin u]=\cos u\,u'"
+      - 'Toma $u=2x^3$'
+      - 'd/dx[\sin u]=\cos u\,u'''
     solution_steps_md_es: |
       Sea $u=2x^{3}$, luego $u'=6x^{2}$. Entonces
       $$\frac{d}{dx}[\sin(u)]=\cos(u)u'=6x^{2}\cos(2x^{3}).$$
     tags: [chain-rule, trig]
     autocheck:
       strategy: symbolic_equivalence
-      reference_expr: "6*x**2*cos(2*x**3)"
+      reference_expr: '6*x**2*cos(2*x**3)'
       domain: all real x
-    meta: {author: BS, created: 2025-10-03, updated: 2025-10-03}
+    meta: { author: BS, created: 2025-10-03, updated: 2025-10-03 }
 
   - id: der-chain-004
     topic: Derivatives
-    subtopic: Chain Rule (power of binomial)
+    subtopic: 'Chain Rule (power of binomial)'
     difficulty: easy
     format: open-ended
     statement_md_es: |
       Calcula
       $$\frac{d}{dx} \big[ (x^{2}+1)^{5} \big].$$
-    statement_md_en: "Compute $\dfrac{d}{dx}[(x^2+1)^5]$."
+    statement_md_en: 'Compute $\dfrac{d}{dx}[(x^2+1)^5]$.'
     answer_type: symbolic
-    expected_answer: "10x(x^{2}+1)^{4}"
-    accepted_equivalents: ["(x^{2}+1)^{4}\cdot 10x"]
+    expected_answer: '10x(x^{2}+1)^{4}'
+    accepted_equivalents: ['(x^{2}+1)^{4}\cdot 10x']
     rubric:
       total_points: 10
       criteria:
-        - {name: Regla de la cadena, points: 5, description: "d/dx[(g(x))^n] = n(g)^{n-1}g'"}
-        - {name: Derivada interna, points: 3, description: "g=x^2+1 → g'=2x"}
-        - {name: Presentación, points: 2, description: "Notación/LaTeX"}
+        - { name: 'Regla de la cadena', points: 5, description: 'd/dx[(g(x))^n] = n(g)^{n-1}g''' }
+        - { name: 'Derivada interna', points: 3, description: 'g=x^2+1 → g''=2x' }
+        - { name: 'Presentación', points: 2, description: 'Notación/LaTeX' }
     hints:
-      - "Usa $g(x)=x^2+1$ y $n=5$"
-      - "Aplica potencia compuesta"
+      - 'Usa $g(x)=x^2+1$ y $n=5$'
+      - 'Aplica potencia compuesta'
     solution_steps_md_es: |
       Sea $g(x)=x^2+1$ con $g'(x)=2x$. Entonces
       $$\frac{d}{dx}[(g(x))^{5}] = 5(g(x))^{4}g'(x) = 5(x^{2}+1)^{4}\cdot 2x = 10x(x^{2}+1)^{4}.$$
     tags: [chain-rule, power-rule]
     autocheck:
       strategy: symbolic_equivalence
-      reference_expr: "10*x*(x**2+1)**4"
+      reference_expr: '10*x*(x**2+1)**4'
       domain: all real x
-    meta: {author: BS, created: 2025-10-03, updated: 2025-10-03}
+    meta: { author: BS, created: 2025-10-03, updated: 2025-10-03 }
 
   - id: der-mixed-005
     topic: Derivatives
-    subtopic: Mixed: product + exp + log
+    subtopic: 'Mixed: product + exp + log'
     difficulty: medium
     format: open-ended
     statement_md_es: |
       Calcula
       $$\frac{d}{dx} \big[ x e^{x} + \ln(x^{2}) \big]$$
       indicando el **dominio** correspondiente.
-    statement_md_en: "Compute $\dfrac{d}{dx}[x e^x + \ln(x^2)]$ and state the domain."
+    statement_md_en: 'Compute $\dfrac{d}{dx}[x e^x + \ln(x^2)]$ and state the domain.'
     answer_type: symbolic
-    expected_answer: "e^{x}(1+x) + \frac{2}{x}  \;\; (x \neq 0)"
-    accepted_equivalents: ["x e^{x} + e^{x} + 2/x"]
+    expected_answer: 'e^{x}(1+x) + \frac{2}{x}  \;\; (x \neq 0)'
+    accepted_equivalents: ['x e^{x} + e^{x} + 2/x']
     rubric:
       total_points: 10
       criteria:
-        - {name: Producto x e^{x}, points: 4, description: "(xe^{x})' = e^{x} + xe^{x}"}
-        - {name: Logaritmo, points: 4, description: "(\ln(x^{2}))' = 2/x, dominio x \neq 0"}
-        - {name: Presentación, points: 2, description: "Notación/LaTeX y dominio"}
+        - { name: 'Producto x e^{x}', points: 4, description: '(xe^{x})'' = e^{x} + xe^{x}' }
+        - { name: 'Logaritmo', points: 4, description: '(\ln(x^{2}))'' = 2/x, dominio x \neq 0' }
+        - { name: 'Presentación', points: 2, description: 'Notación/LaTeX y dominio' }
     hints:
-      - "(fg)' = f'g + fg' con f=x, g=e^x"
-      - "(\ln u)' = u'/u con u=x^2"
+      - '(fg)'' = f''g + fg'' con f=x, g=e^x'
+      - '(\ln u)'' = u''/u con u=x^2'
     solution_steps_md_es: |
       Primero, $(xe^{x})' = e^{x} + xe^{x}$.
       Luego, para $\ln(x^{2})$, sea $u=x^{2}$: $(\ln u)' = u'/u = (2x)/(x^{2}) = 2/x$, con dominio $x \neq 0$.
@@ -195,6 +196,6 @@ exercises:
     tags: [product-rule, exponential, logarithm, domain]
     autocheck:
       strategy: symbolic_equivalence
-      reference_expr: "exp(x)*(1+x) + 2/x"
-      domain: "x != 0"
-    meta: {author: BS, created: 2025-10-03, updated: 2025-10-03}
+      reference_expr: 'exp(x)*(1+x) + 2/x'
+      domain: 'x != 0'
+    meta: { author: BS, created: 2025-10-03, updated: 2025-10-03 }
