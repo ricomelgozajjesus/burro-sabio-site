@@ -318,7 +318,7 @@ exercises:
   - id: stewart-3_1-007
     topic: Derivadas
     subtopic: Polinomios (en t)
-    difficulty: easy
+    difficulty: easy 
     format: open-ended
     statement_md_es: |
       Calcule la derivada:
