@@ -893,3 +893,307 @@ exercises:
       author: 'Curación JJR'
       created: '2025-10-04'
       updated: '2025-10-04'
+
+  - id: stewart-3_1-021
+    topic: Derivadas
+    subtopic: Polinomio cúbico general
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$h(u) = A\,u^{3} + B\,u^{2} + C\,u$$
+    answer_type: symbolic
+    expected_answer: '3A\,u^{2} + 2B\,u + C'
+    hints: ['Derive término a término.']
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Proceso, points: 5, description: 'Regla de la potencia por término'}
+        - {name: Resultado, points: 3, description: 'Coeficientes correctos'}
+        - {name: Presentación, points: 2, description: 'Orden y claridad'}
+    tags: [textbook, Stewart, 3.1, polinomio]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '3*A*u**2 + 2*B*u + C'
+      domain: 'all real u'
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
+
+  - id: stewart-3_1-025
+    topic: Derivadas
+    subtopic: Potencias reales
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$j(x) = x^{2.4} + e^{2.4}$$
+    answer_type: symbolic
+    expected_answer: '2.4\,x^{1.4}'
+    hints: ['La derivada de una constante ($e^{2.4}$) es 0.']
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Potencia real, points: 6, description: '$d/dx[x^{m}] = m x^{m-1}$'}
+        - {name: Presentación, points: 4, description: 'Usa exponentes decimales correctamente'}
+    tags: [textbook, Stewart, 3.1]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '2.4*x**1.4'
+      domain: 'all real x'
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
+
+  - id: stewart-3_1-026
+    topic: Derivadas
+    subtopic: Exponencial y potencias negativas
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$y(v) = a\,e^{v} + \dfrac{b}{v} + \dfrac{c}{v^{2}}$$
+    answer_type: symbolic
+    expected_answer: 'a\,e^{v} - \dfrac{b}{v^{2}} - \dfrac{2c}{v^{3}}'
+    hints: ['Combine regla exponencial y potencia.']
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Proceso, points: 6, description: 'Deriva cada término correctamente'}
+        - {name: Presentación, points: 4, description: 'Simplifica signos y potencias'}
+    tags: [textbook, Stewart, 3.1, racional, exponencial]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: 'a*exp(v) - b/v**2 - 2*c/v**3'
+      domain: 'v != 0'
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
+
+  - id: stewart-3_1-027
+    topic: Derivadas
+    subtopic: Simplificación previa
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$G(q) = \big(\sqrt{\,1 + q^{2}\,}\big)^{2}$$
+    answer_type: symbolic
+    expected_answer: '2q'
+    hints: ['Antes de derivar, simplifique $G(q)=1+q^{2}$.']
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Simplificación, points: 5, description: 'Reconoce que $(\sqrt{\cdot})^{2}$ se simplifica'}
+        - {name: Derivación, points: 3, description: 'Deriva $1+q^2$'}
+        - {name: Presentación, points: 2, description: 'Notación clara'}
+    tags: [textbook, Stewart, 3.1]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '2*q'
+      domain: 'all real q'
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
+
+  - id: stewart-3_1-028
+    topic: Derivadas
+    subtopic: Cociente racional
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$F(z) = \dfrac{A + Bz + Cz^{2}}{z^{2}}$$
+    answer_type: symbolic
+    expected_answer: '-\dfrac{2A}{z^{3}} - \dfrac{B}{z^{2}}'
+    hints: ['Escriba $Az^{-2} + Bz^{-1} + C$.']
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Reescritura, points: 5, description: 'Potencias negativas'}
+        - {name: Derivación, points: 3, description: 'Aplica la regla de la potencia'}
+        - {name: Presentación, points: 2, description: 'Notación clara'}
+    tags: [textbook, Stewart, 3.1, racional]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '-2*A/z**3 - B/z**2'
+      domain: 'z != 0'
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
+
+  - id: stewart-3_1-030
+    topic: Derivadas
+    subtopic: Cociente con raíz
+    difficulty: medium
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$D(t) = \dfrac{1 + 16t^{2}}{\sqrt{\,4t^{3}\,}}$$
+    answer_type: symbolic
+    expected_answer: '\dfrac{16t^{2} - 3}{4\,t^{5/2}}'
+    hints: ['Reescriba $D(t)=\tfrac{1}{2}(1+16t^{2})t^{-3/2}$ y derive.']
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Reescritura, points: 4, description: 'Convierte raíz y cociente a potencias'}
+        - {name: Derivación, points: 4, description: 'Producto + potencia'}
+        - {name: Presentación, points: 2, description: 'Simplifica al final'}
+    tags: [textbook, Stewart, 3.1, raiz, racional]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '(16*t**2 - 3)/(4*t**(5/2))'
+      domain: 't > 0'
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
+
+  - id: stewart-3_1-031
+    topic: Derivadas
+    subtopic: Exponencial y potencias negativas
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$z(y) = \dfrac{A}{y^{10}} + B\,e^{y}$$
+    answer_type: symbolic
+    expected_answer: '-\dfrac{10A}{y^{11}} + B\,e^{y}'
+    hints: ['$A y^{-10}$ y $Be^{y}$ por separado.']
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Proceso, points: 6, description: 'Aplica potencia y exponencial'}
+        - {name: Presentación, points: 4, description: 'Simplifica signos'}
+    tags: [textbook, Stewart, 3.1, exponencial, racional]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '-10*A/y**11 + B*exp(y)'
+      domain: 'y != 0'
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
+
+  - id: stewart-3_1-032
+    topic: Derivadas
+    subtopic: Exponencial compuesta
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$y(x) = e^{\,x^{11}} + 1$$
+    answer_type: symbolic
+    expected_answer: '11x^{10}\,e^{\,x^{11}}'
+    hints: ['Cadena: $d/dx\,e^{g(x)} = g^\prime(x)\,e^{g(x)}$.']
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Cadena, points: 6, description: 'Deriva $x^{11}$ y multiplica por $e^{x^{11}}$'}
+        - {name: Presentación, points: 4, description: 'Notación clara'}
+    tags: [textbook, Stewart, 3.1, exponencial]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '11*x**10*exp(x**11)'
+      domain: 'all real x'
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
+
+  - id: stewart-3_1-022
+    topic: Derivadas
+    subtopic: Cociente con raíz y potencia
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$y(x) = \frac{\sqrt{x} + x}{x^{2}}$$
+    answer_type: symbolic
+    expected_answer: -\dfrac{3 + 2\sqrt{x}}{2\,x^{5/2}}
+    hints:
+      - 'Reescriba $y(x)=x^{-3/2}+x^{-1}$ y derive término a término.'
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Reescritura, points: 4, description: 'Convierte a potencias negativas'}
+        - {name: Derivación, points: 4, description: 'Aplica regla de la potencia'}
+        - {name: Presentación, points: 2, description: 'Simplifica al final'}
+    tags: [textbook, Stewart, 3.1, raiz, cociente]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '-(3 + 2*sqrt(x))/(2*x**(5/2))'
+      domain: 'x != 0'
+    meta:
+      source: 'Stewart Cálculo, Sección 3.1'
+      author: 'Curación JJR'
+      created: '2025-10-04'
+      updated: '2025-10-04'
+
+  - id: stewart-3_1-023
+    topic: Derivadas
+    subtopic: Producto/cociente con raíz
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$y(x) = \frac{x^{2} + 4x + 3}{\sqrt{x}}$$
+    answer_type: symbolic
+    expected_answer: \dfrac{3x^{2} + 4x - 3}{2\,x^{3/2}}
+    hints:
+      - 'Escriba $y(x)=(x^{2}+4x+3)\,x^{-1/2}$ y use producto.'
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Producto, points: 5, description: '$(fg)^\prime=f^\prime g+fg^\prime$'}
+        - {name: Simplificación, points: 3, description: 'Denominador común $2x^{3/2}$'}
+        - {name: Presentación, points: 2, description: 'Notación clara'}
+    tags: [textbook, Stewart, 3.1, raiz, cociente]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '(3*x**2 + 4*x - 3)/(2*x**(3/2))'
+      domain: 'x > 0'
+    meta:
+      source: 'Stewart Cálculo, Sección 3.1'
+      author: 'Curación JJR'
+      created: '2025-10-04'
+      updated: '2025-10-04'
+
+  - id: stewart-3_1-024
+    topic: Derivadas
+    subtopic: Raíces y potencia negativa
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$G(t) = \sqrt{5t} + \frac{\sqrt{7}}{t}$$
+    answer_type: symbolic
+    expected_answer: \dfrac{\sqrt{5}}{2\sqrt{t}} - \dfrac{\sqrt{7}}{t^{2}}
+    hints:
+      - 'Derive $\sqrt{5t}=\sqrt{5}\,t^{1/2}$ y $\sqrt{7}\,t^{-1}$ por separado.'
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Potencia/raíz, points: 6, description: 'Aplica $d/dt[t^{m}] = m t^{m-1}$'}
+        - {name: Presentación, points: 4, description: 'Expresa raíces en forma estándar'}
+    tags: [textbook, Stewart, 3.1, raiz]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: 'sqrt(5)/(2*sqrt(t)) - sqrt(7)/t**2'
+      domain: 't > 0'
+    meta:
+      source: 'Stewart Cálculo, Sección 3.1'
+      author: 'Curación JJR'
+      created: '2025-10-04'
+      updated: '2025-10-04'
+
+  - id: stewart-3_1-029
+    topic: Derivadas
+    subtopic: Cociente con raíz cúbica y exponencial
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Calcule la derivada:
+      $$f(v) = \frac{v^{1/3} - 2v\,e^{v}}{v}$$
+    answer_type: symbolic
+    expected_answer: -\dfrac{2}{3}\,v^{-5/3} - 2e^{v}
+    hints:
+      - 'Simplifique: $f(v)=v^{-2/3} - 2e^{v}$ antes de derivar.'
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Reescritura, points: 4, description: 'Divide y reduce potencias'}
+        - {name: Derivación, points: 4, description: 'Potencia fraccionaria + exponencial'}
+        - {name: Presentación, points: 2, description: 'Notación clara'}
+    tags: [textbook, Stewart, 3.1, raiz, exponencial]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '-(2/3)*v**(-5/3) - 2*exp(v)'
+      domain: 'v != 0'
+    meta:
+      source: 'Stewart Cálculo, Sección 3.1'
+      author: 'Curación JJR'
+      created: '2025-10-04'
+      updated: '2025-10-04'
+      
