@@ -1812,3 +1812,34 @@ exercises:
     author: "Curación JJR"
     created: "2025-10-05"
     updated: "2025-10-05"
+- id: stewart-3_1-034
+  topic: Derivadas
+  subtopic: Recta tangente (polinomial cuadrática)
+  difficulty: easy
+  format: open-ended
+  statement_md_es: |
+    Encuentre la **ecuación de la recta tangente** a la curva en el punto dado.
+
+    $$y = x^{2} - 2x + 2,\qquad (1,\,1)$$
+  answer_type: text
+  expected_answer: |
+    Derivada: $$f'(x)=2x-2 \Rightarrow f'(1)=0.$$
+    Recta tangente: $$y-1=0(x-1)\Rightarrow y=1.$$
+    (Recta horizontal)
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Derivada, points: 5, description: "f'(x)=2x-2 y f'(1)=0"}
+      - {name: Ecuación de la recta, points: 3, description: "y-1=0(x-1) → y=1"}
+      - {name: Presentación, points: 2, description: "Expresión clara y ordenada"}
+  hints:
+    - 'Use $f'(x)$ y la forma punto–pendiente: $y-y_0=m(x-x_0)$.'
+  tags: [textbook, Stewart, "3.1", tangent-line]
+  autocheck:
+    strategy: text
+    reference_expr: "y = 1"
+  meta:
+    source: "Stewart Cálculo, Sección 3.1"
+    author: "Curación JJR"
+    created: "2025-10-05"
+    updated: "2025-10-05"
