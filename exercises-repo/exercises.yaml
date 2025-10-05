@@ -1781,3 +1781,35 @@ exercises:
     author: Curación JJR
     created: '2025-10-04'
     updated: '2025-10-04'
+- id: stewart-3_1-033
+  topic: Derivadas
+  subtopic: Recta tangente (polinomial)
+  difficulty: easy
+  format: open-ended
+  statement_md_es: |
+    Encuentre la **ecuación de la recta tangente** a la curva en el punto dado.
+    \[
+      y = 2x^{3} - 2x^{2} + 3,\qquad (1,\,3)
+    \]
+  answer_type: text
+  expected_answer: |
+    Derivada: \(f'(x)=6x^{2}-4x\Rightarrow f'(1)=2\).
+    Recta tangente (punto–pendiente):
+    \(y-3=2(x-1)\Rightarrow y=2x+1\).
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Derivada, points: 5, description: "f'(x)=6x^2-4x y f'(1)=2"}
+      - {name: Ecuación punto–pendiente, points: 3, description: "y-3=2(x-1)"}
+      - {name: Presentación, points: 2, description: "Notación clara"}
+  hints:
+    - "Use \(f'(x)\) y la forma punto–pendiente: \(y-y_0=m(x-x_0)\)."
+  tags: [textbook, Stewart, "3.1", tangent-line]
+  autocheck:
+    strategy: text
+    reference_expr: "y = 2x + 1"
+  meta:
+    source: "Stewart Cálculo, Sección 3.1"
+    author: "Curación JJR"
+    created: "2025-10-05"
+    updated: "2025-10-05"
