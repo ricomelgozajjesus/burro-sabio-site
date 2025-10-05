@@ -1885,3 +1885,70 @@ exercises:
       y = 4^{x} - x - 3,\qquad (1,\,0)
     \]
  
+  - id: stewart-3_1-037
+    topic: Derivadas
+    subtopic: Rectas tangente y normal
+    difficulty: medium
+    format: open-ended
+    statement_md_es: |
+      Encuentre las ecuaciones de las **rectas tangente y normal** a la curva
+      $$y = x^{2} - x^{4}$$
+      en el punto $(1,0)$.
+    answer_type: symbolic
+    expected_answer: |
+      Tangente: $y = (2x - 4x^{3})|_{x=1}\,(x - 1) + 0 = -2(x - 1)$  
+      Normal: $y - 0 = \tfrac{1}{2}(x - 1)$
+    hints:
+      - 'Calcule $y'' = 2x - 4x^{3}$ y evalúe en $x=1$.'
+      - 'Pendiente tangente $m_t = y''(1) = -2$; pendiente normal $m_n = -1/m_t = 1/2$.'
+      - 'Use la forma punto-pendiente $y - y_1 = m(x - x_1)$.'
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Derivación, points: 4, description: 'Deriva $y'' = 2x - 4x^{3}$ correctamente'}
+        - {name: Sustitución, points: 3, description: 'Evalúa $y''(1)$ y calcula $m_t, m_n$'}
+        - {name: Ecuaciones, points: 3, description: 'Construye rectas tangente y normal con notación clara'}
+    tags: [textbook, Stewart, 3.1, tangente, normal]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '-2*(x-1)'   # tangente
+      domain: 'all real x'
+    meta:
+      source: 'Stewart Cálculo, Sección 3.1'
+      author: 'Curación JJR'
+      created: '2025-10-06'
+      updated: '2025-10-06'
+
+  - id: stewart-3_1-038
+    topic: Derivadas
+    subtopic: Rectas tangente y normal (implícita)
+    difficulty: medium
+    format: open-ended
+    statement_md_es: |
+      Encuentre las ecuaciones de las **rectas tangente y normal** a la curva
+      $$y^{2} = x^{3}$$
+      en el punto $(1,1)$.
+    answer_type: symbolic
+    expected_answer: |
+      Tangente: $y - 1 = \tfrac{3}{2}(x - 1)$  
+      Normal: $y - 1 = -\tfrac{2}{3}(x - 1)$
+    hints:
+      - 'Derive implícitamente $2y\,y'' = 3x^{2}$.'
+      - 'Evalúe en $(1,1)$ para obtener $y''(1,1) = \tfrac{3}{2}$.'
+      - 'Use las pendientes $m_t = \tfrac{3}{2}$ y $m_n = -\tfrac{2}{3}$ en la forma punto-pendiente.'
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Derivación implícita, points: 4, description: 'Aplica $2yy''=3x^{2}$ correctamente'}
+        - {name: Sustitución, points: 3, description: 'Evalúa pendiente en el punto dado'}
+        - {name: Ecuaciones, points: 3, description: 'Construye tangente y normal con notación clara'}
+    tags: [textbook, Stewart, 3.1, tangente, normal, implicita]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '(3/2)*(x-1)'  # tangente
+      domain: 'y > 0'
+    meta:
+      source: 'Stewart Cálculo, Sección 3.1'
+      author: 'Curación JJR'
+      created: '2025-10-06'
+      updated: '2025-10-06'
