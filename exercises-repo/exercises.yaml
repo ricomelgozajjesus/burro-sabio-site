@@ -1844,3 +1844,34 @@ exercises:
     author: "Curación JJR"
     created: "2025-10-05"
     updated: "2025-10-05"
+
+- id: stewart-3_1-035
+  topic: Derivadas
+  subtopic: Recta tangente (polinomial)
+  difficulty: easy
+  format: open-ended
+  statement_md_es: |
+    Encuentre la **ecuación de la recta tangente** a la curva en el punto dado.
+
+    $$y = x^{2} - 2x + 3,\qquad (2,\,3)$$
+  answer_type: text
+  expected_answer: |
+    Derivada: $$f'(x)=2x-2 \Rightarrow f'(2)=2.$$
+    Recta tangente: $$y-3=2(x-2)\Rightarrow y=2x-1.$$
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Derivada, points: 5, description: "f'(x)=2x-2 y f'(2)=2"}
+      - {name: Ecuación punto–pendiente, points: 3, description: "y-3=2(x-2) → y=2x-1"}
+      - {name: Presentación, points: 2, description: "Notación clara"}
+  hints:
+    - "Use $f'(x)$ y la forma punto–pendiente: $y-y_0=m(x-x_0)$."
+  tags: ["textbook", "Stewart", "3.1", "tangent-line"]
+  autocheck:
+    strategy: text
+    reference_expr: "y = 2x - 1"
+  meta:
+    source: "Stewart Cálculo, Sección 3.1"
+    author: "Curación JJR"
+    created: "2025-10-05"
+    updated: "2025-10-05"
