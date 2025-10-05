@@ -1874,14 +1874,37 @@ exercises:
     created: "2025-10-05"
     updated: "2025-10-05"
 
-- id: stewart-3_1-036
-  topic: Derivadas
-  subtopic: Recta tangente (exponencial de base 4 menos lineal)
-  difficulty: easy
-  format: open-ended
-  statement_md_es: |
-    Encuentre la **ecuación de la recta tangente** a la curva en el punto dado.
-    \[
-      y = 4^{x} - x - 3,\qquad (1,\,0)
-    \]
- 
+  - id: stewart-3_1-036
+    topic: Derivadas
+    subtopic: Recta tangente (exponencial de base 4 menos lineal)
+    difficulty: easy
+    format: open-ended
+    statement_md_es: |
+      Encuentre la **ecuación de la recta tangente** a la curva en el punto dado:
+      \[
+        y = 4^{x} - x - 3, \qquad (1,\,0)
+      \]
+    answer_type: symbolic
+    expected_answer: |
+      Tangente: $y = (4^{x}\ln 4 - 1)\big|_{x=1}(x - 1)$  
+      Evaluando: $y = (4\ln 4 - 1)(x - 1)$
+    hints:
+      - 'Derive $y'' = 4^{x}\ln 4 - 1$.'
+      - 'Evalúe la pendiente en $x=1$: $m = 4\ln 4 - 1$.'
+      - 'Use la forma punto-pendiente $y - y_1 = m(x - x_1)$.'
+    rubric:
+      total_points: 10
+      criteria:
+        - {name: Derivación, points: 4, description: 'Aplica correctamente la regla de la exponencial $a^{x}$.'}
+        - {name: Sustitución, points: 3, description: 'Evalúa pendiente $m=4\ln 4 - 1$ en $x=1$.'}
+        - {name: Ecuación, points: 3, description: 'Construye la recta tangente con forma punto-pendiente y notación clara.'}
+    tags: [textbook, Stewart, 3.1, tangente, exponencial]
+    autocheck:
+      strategy: symbolic_equivalence
+      reference_expr: '(4*log(4) - 1)*(x - 1)'
+      domain: 'all real x'
+    meta:
+      source: 'Stewart Cálculo, Sección 3.1'
+      author: 'Curación JJR'
+      created: '2025-10-06'
+      updated: '2025-10-06'
