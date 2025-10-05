@@ -1,5 +1,5 @@
 version: '0.2'
-collection: 'Burro-Sabio Magic Notebooks — Calculus I: Reglas de Derivación'
+collection: 'Burro-Sabio Magic Notebooks — Calculus I: Reglas de Derivación' 
 license: CC BY-NC 4.0
 schema:
   id: string (unique)
