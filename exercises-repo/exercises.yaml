@@ -1834,7 +1834,7 @@ exercises:
       - {name: Ecuación de la recta, points: 3, description: "y-1=0(x-1) → y=1"}
       - {name: Presentación, points: 2, description: "Expresión clara y ordenada"}
   hints:
-    - 'Use $f'(x)$ y la forma punto–pendiente: $y-y_0=m(x-x_0)$.'
+    - Use $f'(x)$ y la forma punto–pendiente: $y-y_0=m(x-x_0)$.
   tags: [textbook, Stewart, "3.1", tangent-line]
   autocheck:
     strategy: text
