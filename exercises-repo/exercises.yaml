@@ -986,4 +986,9 @@ exercises:
       reference_expr: '11*x**10*exp(x**11)'
       domain: 'all real x'
     meta:
-      source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'
+     meta:
+          source: 'Stewart 3.1'
+          author: 'Curación JJR'
+        created: '2025-10-04'
+        updated: '2025-10-04'
+      
