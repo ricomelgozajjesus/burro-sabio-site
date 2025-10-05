@@ -1,6 +1,6 @@
-version: "0.2"
-collection: "Burro-Sabio Magic Notebooks — Calculus I: Reglas de Derivación"
-license: "CC BY-NC 4.0"
+version: '0.2'
+collection: 'Burro-Sabio Magic Notebooks — Calculus I: Reglas de Derivación'
+license: 'CC BY-NC 4.0'
 
 schema:
   id: string (unique)
@@ -29,17 +29,17 @@ schema:
   solution_steps_md_es: Worked solution in Spanish (Markdown + LaTeX)
   tags: [keywords]
   autocheck:
-    strategy: [symbolic_equivalence, numeric_sampling, text]
-    reference_expr: String form of expected derivative (e.g., '2*x*sin(x)+x^2*cos(x)')
+    strategy: [symbolic_equivalence, numeric_sampling]
+    reference_expr: String form of expected derivative (e.g., '2*x*sin(x)+x**2*cos(x)')
     domain: optional domain restrictions (e.g., 'x != 0')
   media:
     images: []
     datasets: []
   meta:
-    author: "J. J. Rico + BS Team"
-    source: "BS curated"
-    created: "2025-10-03"
-    updated: "2025-10-03"
+    author: J. J. Rico + BS Team
+    source: BS curated
+    created: 2025-10-03
+    updated: 2025-10-03
 
 exercises:
   - id: der-prod-001
@@ -50,18 +50,18 @@ exercises:
     statement_md_es: |
       Calcula
       $$\frac{d}{dx} \big[ x^{2} \sin x \big].$$
-    statement_md_en: "Compute $\\frac{d}{dx}[x^2 \\sin x]$."
+    statement_md_en: 'Compute $\frac{d}{dx}[x^2 \sin x]$.'
     answer_type: symbolic
     expected_answer: '2x\sin x + x^{2}\cos x'
     accepted_equivalents: ['x^{2}\cos x + 2x\sin x']
     rubric:
       total_points: 10
       criteria:
-        - { name: 'Regla del producto', points: 4, description: "Aplica (fg)' = f'g + fg'" }
+        - { name: 'Regla del producto', points: 4, description: 'Aplica (fg)'' = f''g + fg''' }
         - { name: 'Derivadas básicas', points: 4, description: 'd/dx[x^2]=2x, d/dx[\sin x]=\cos x' }
         - { name: 'Presentación', points: 2, description: 'Orden/LaTeX' }
     hints:
-      - "Recuerda (fg)' = f'g + fg'"
+      - 'Recuerda (fg)'' = f''g + fg'''
       - 'd/dx[x^2]=2x y d/dx[\sin x]=\cos x'
     solution_steps_md_es: |
       Sea $f(x)=x^2$ y $g(x)=\sin x$. Entonces $f'(x)=2x$ y $g'(x)=\cos x$. Por la regla del producto,
@@ -70,11 +70,8 @@ exercises:
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '2*x*sin(x)+x**2*cos(x)'
-      domain: 'all real x'
-    meta:
-      author: "BS"
-      created: "2025-10-03"
-      updated: "2025-10-03"
+      domain: all real x
+    meta: { author: BS, created: 2025-10-03, updated: 2025-10-03 }
 
   - id: der-quot-002
     topic: Derivatives
@@ -84,19 +81,18 @@ exercises:
     statement_md_es: |
       Calcula
       $$\frac{d}{dx} \left[ \frac{3x^{2}-5}{x+1} \right].$$
-    statement_md_en: "Compute $\\dfrac{d}{dx}\\left[ \\frac{3x^2-5}{x+1} \\right]$."
+    statement_md_en: 'Compute $\dfrac{d}{dx}\left[ \frac{3x^2-5}{x+1} \right]$.'
     answer_type: symbolic
     expected_answer: '\dfrac{3x^{2}+6x+5}{(x+1)^{2}}'
     accepted_equivalents: ['\dfrac{6x(x+1)-(3x^{2}-5)}{(x+1)^{2}}']
     rubric:
       total_points: 10
       criteria:
-        - { name: 'Regla del cociente', points: 4, description: "(u/v)' = (u'v - uv')/v^2" }
+        - { name: 'Regla del cociente', points: 4, description: '(u/v)'' = (u''v - uv'')/v^2' }
         - { name: 'Simplificación', points: 4, description: 'Algebra correcta al combinar términos' }
         - { name: 'Presentación', points: 2, description: 'Notación/LaTeX' }
     hints:
       - 'Identifica $u=3x^2-5$, $v=x+1$'
-      - "Calcula $u'=6x$, $v'=1$ y aplica (u/v)'"
     solution_steps_md_es: |
       Con $u=3x^2-5$, $v=x+1$, se tiene $u'=6x$, $v'=1$. Entonces
       $$(u/v)'=\frac{u'v-uv'}{v^{2}}=\frac{6x(x+1)-(3x^{2}-5)}{(x+1)^2}=\frac{3x^{2}+6x+5}{(x+1)^{2}}.$$
@@ -105,10 +101,7 @@ exercises:
       strategy: symbolic_equivalence
       reference_expr: '(3*x**2+6*x+5)/(x+1)**2'
       domain: 'x != -1'
-    meta:
-      author: "BS"
-      created: "2025-10-03"
-      updated: "2025-10-03"
+    meta: { author: BS, created: 2025-10-03, updated: 2025-10-03 }
 
   - id: der-chain-003
     topic: Derivatives
@@ -118,19 +111,19 @@ exercises:
     statement_md_es: |
       Calcula
       $$\frac{d}{dx} \big[ \sin(2x^{3}) \big].$$
-    statement_md_en: "Compute $\\dfrac{d}{dx}[\\sin(2x^3)]$."
+    statement_md_en: 'Compute $\dfrac{d}{dx}[\sin(2x^3)]$.'
     answer_type: symbolic
     expected_answer: '6x^{2}\cos(2x^{3})'
     accepted_equivalents: ['\cos(2x^{3})\cdot 6x^{2}']
     rubric:
       total_points: 10
       criteria:
-        - { name: 'Regla de la cadena', points: 5, description: "d/dx[sin(u)] = cos(u)u'" }
-        - { name: 'Derivada interna', points: 3, description: "u=2x^3 → u'=6x^2" }
+        - { name: 'Regla de la cadena', points: 5, description: 'd/dx[sin(u)] = cos(u)u''' }
+        - { name: 'Derivada interna', points: 3, description: 'u=2x^3 → u''=6x^2' }
         - { name: 'Presentación', points: 2, description: 'Notación/LaTeX' }
     hints:
       - 'Toma $u=2x^3$'
-      - "d/dx[\\sin u]=\\cos u\\,u'"
+      - 'd/dx[\sin u]=\cos u\,u'''
     solution_steps_md_es: |
       Sea $u=2x^{3}$, luego $u'=6x^{2}$. Entonces
       $$\frac{d}{dx}[\sin(u)]=\cos(u)u'=6x^{2}\cos(2x^{3}).$$
@@ -138,11 +131,8 @@ exercises:
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '6*x**2*cos(2*x**3)'
-      domain: 'all real x'
-    meta:
-      author: "BS"
-      created: "2025-10-03"
-      updated: "2025-10-03"
+      domain: all real x
+    meta: { author: BS, created: 2025-10-03, updated: 2025-10-03 }
 
   - id: der-chain-004
     topic: Derivatives
@@ -152,19 +142,18 @@ exercises:
     statement_md_es: |
       Calcula
       $$\frac{d}{dx} \big[ (x^{2}+1)^{5} \big].$$
-    statement_md_en: "Compute $\\dfrac{d}{dx}[(x^2+1)^5]$."
+    statement_md_en: 'Compute $\dfrac{d}{dx}[(x^2+1)^5]$.'
     answer_type: symbolic
     expected_answer: '10x(x^{2}+1)^{4}'
     accepted_equivalents: ['(x^{2}+1)^{4}\cdot 10x']
     rubric:
       total_points: 10
       criteria:
-        - { name: 'Regla de la cadena', points: 5, description: "d/dx[(g(x))^n] = n(g)^{n-1}g'" }
-        - { name: 'Derivada interna', points: 3, description: "g=x^2+1 → g'=2x" }
+        - { name: 'Regla de la cadena', points: 5, description: 'd/dx[(g(x))^n] = n(g)^{n-1}g''' }
+        - { name: 'Derivada interna', points: 3, description: 'g=x^2+1 → g''=2x' }
         - { name: 'Presentación', points: 2, description: 'Notación/LaTeX' }
     hints:
       - 'Usa $g(x)=x^2+1$ y $n=5$'
-      - 'Aplica potencia compuesta'
     solution_steps_md_es: |
       Sea $g(x)=x^2+1$ con $g'(x)=2x$. Entonces
       $$\frac{d}{dx}[(g(x))^{5}] = 5(g(x))^{4}g'(x) = 5(x^{2}+1)^{4}\cdot 2x = 10x(x^{2}+1)^{4}.$$
@@ -172,11 +161,8 @@ exercises:
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '10*x*(x**2+1)**4'
-      domain: 'all real x'
-    meta:
-      author: "BS"
-      created: "2025-10-03"
-      updated: "2025-10-03"
+      domain: all real x
+    meta: { author: BS, created: 2025-10-03, updated: 2025-10-03 }
 
   - id: der-mixed-005
     topic: Derivatives
@@ -187,19 +173,19 @@ exercises:
       Calcula
       $$\frac{d}{dx} \big[ x e^{x} + \ln(x^{2}) \big]$$
       indicando el **dominio** correspondiente.
-    statement_md_en: "Compute $\\dfrac{d}{dx}[x e^x + \\ln(x^2)]$ and state the domain."
+    statement_md_en: 'Compute $\dfrac{d}{dx}[x e^x + \ln(x^2)]$ and state the domain.'
     answer_type: symbolic
-    expected_answer: 'e^{x}(1+x) + \frac{2}{x} \quad (x \neq 0)'
+    expected_answer: 'e^{x}(1+x) + \frac{2}{x}  \;\; (x \neq 0)'
     accepted_equivalents: ['x e^{x} + e^{x} + 2/x']
     rubric:
       total_points: 10
       criteria:
-        - { name: 'Producto x e^{x}', points: 4, description: "(xe^{x})' = e^{x} + xe^{x}" }
-        - { name: 'Logaritmo', points: 4, description: "(\\ln(x^{2}))' = 2/x, dominio x \\neq 0" }
+        - { name: 'Producto x e^{x}', points: 4, description: '(xe^{x})'' = e^{x} + xe^{x}' }
+        - { name: 'Logaritmo', points: 4, description: '(\ln(x^{2}))'' = 2/x, dominio x \neq 0' }
         - { name: 'Presentación', points: 2, description: 'Notación/LaTeX y dominio' }
     hints:
-      - "(fg)' = f'g + fg' con f=x, g=e^x"
-      - "(\\ln u)' = u'/u con u=x^2"
+      - '(fg)'' = f''g + fg'' con f=x, g=e^x'
+      - '(\ln u)'' = u''/u con u=x^2'
     solution_steps_md_es: |
       Primero, $(xe^{x})' = e^{x} + xe^{x}$.
       Luego, para $\ln(x^{2})$, sea $u=x^{2}$: $(\ln u)' = u'/u = (2x)/(x^{2}) = 2/x$, con dominio $x \neq 0$.
@@ -210,10 +196,7 @@ exercises:
       strategy: symbolic_equivalence
       reference_expr: 'exp(x)*(1+x) + 2/x'
       domain: 'x != 0'
-    meta:
-      author: "BS"
-      created: "2025-10-03"
-      updated: "2025-10-03"
+    meta: { author: BS, created: 2025-10-03, updated: 2025-10-03 }
 
   - id: stewart-3_1-003
     topic: Derivadas
@@ -232,7 +215,7 @@ exercises:
         - {name: Presentación, points: 5, description: 'Expresión clara y ordenada'}
     hints:
       - 'Recuerde: la derivada de una constante es 0.'
-    tags: [textbook, Stewart, '3.1', derivadas]
+    tags: [textbook, Stewart, 3.1, derivadas]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '0'
@@ -240,8 +223,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1'
       author: 'J. J. Rico (Magic Notebooks código)'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-004
     topic: Derivadas
@@ -260,7 +243,7 @@ exercises:
         - {name: Presentación, points: 5, description: 'Expresión clara y ordenada'}
     hints:
       - 'Recuerde: la derivada de una constante es 0.'
-    tags: [textbook, Stewart, '3.1', derivadas]
+    tags: [textbook, Stewart, 3.1, derivadas]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '0'
@@ -268,8 +251,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1'
       author: 'J. J. Rico (Magic Notebooks código)'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-005
     topic: Derivadas
@@ -290,7 +273,7 @@ exercises:
         - {name: Presentación, points: 2, description: 'Notación clara'}
     hints:
       - 'La derivada de $ax+b$ es $a$.'
-    tags: [textbook, Stewart, '3.1', derivadas, lineal]
+    tags: [textbook, Stewart, 3.1, derivadas, lineal]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '5.2'
@@ -298,8 +281,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1 (Ejs. 3–32)'
       author: 'Curación: J. J. Rico'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-006
     topic: Derivadas
@@ -320,16 +303,16 @@ exercises:
         - {name: Presentación, points: 2, description: 'Notación clara'}
     hints:
       - 'Escriba $t(x)=7(4x^2-3x+12)^{-1}$ y use la regla de la cadena.'
-    tags: [textbook, Stewart, '3.1', derivadas, racional]
+    tags: [textbook, Stewart, 3.1, derivadas, racional]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '-7*(8*x-3)/(4*x**2-3*x+12)**2'
-      domain: 'x ∈ ℝ'
+      domain: 'x \in \mathbb{R}'
     meta:
       source: 'Stewart Cálculo, Sección 3.1 (Ejs. 3–32)'
       author: 'Curación: J. J. Rico'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-007
     topic: Derivadas
@@ -350,7 +333,7 @@ exercises:
         - {name: Presentación, points: 2, description: 'Notación clara'}
     hints:
       - 'Use $(t^n)^\prime = n t^{n-1}$.'
-    tags: [textbook, Stewart, '3.1', polinomio]
+    tags: [textbook, Stewart, 3.1, polinomio]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '6*t**2 - 6*t - 4'
@@ -358,8 +341,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1 (Ejs. 3–32)'
       author: 'Curación: J. J. Rico'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-008
     topic: Derivadas
@@ -380,7 +363,7 @@ exercises:
         - {name: Presentación, points: 2, description: 'Notación clara'}
     hints:
       - '$(at^n)^\prime = a\,n\,t^{n-1}$; $(\text{constante})^\prime = 0$.'
-    tags: [textbook, Stewart, '3.1', polinomio]
+    tags: [textbook, Stewart, 3.1, polinomio]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '7.0*t**4 - 5.0*t'
@@ -388,8 +371,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1 (Ejs. 3–32)'
       author: 'Curación: J. J. Rico'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-009
     topic: Derivadas
@@ -405,12 +388,12 @@ exercises:
     rubric:
       total_points: 10
       criteria:
-        - {name: Producto, points: 6, description: "Aplica $(fg)'=f'g+fg'$"}
+        - {name: Producto, points: 6, description: 'Aplica $(fg)^\prime=f^\prime g+fg^\prime$'}
         - {name: Simplificación, points: 2, description: 'Combina términos'}
         - {name: Presentación, points: 2, description: 'Notación clara'}
     hints:
       - 'Puede expandir o usar la regla del producto.'
-    tags: [textbook, Stewart, '3.1', producto]
+    tags: [textbook, Stewart, 3.1, producto]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '2*x - 6*x**2'
@@ -418,8 +401,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1 (Ejs. 3–32)'
       author: 'Curación: J. J. Rico'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-010
     topic: Derivadas
@@ -435,12 +418,12 @@ exercises:
     rubric:
       total_points: 10
       criteria:
-        - {name: Producto, points: 6, description: "$(fg)'=f'g+fg'$ con $f=3u^2+1$, $g=u+2$"}
+        - {name: Producto, points: 6, description: '$(fg)^\prime=f^\prime g+fg^\prime$ con $f=3u^2+1$, $g=u+2$'}
         - {name: Simplificación, points: 2, description: 'Combina y ordena términos'}
         - {name: Presentación, points: 2, description: 'Notación clara'}
     hints:
       - 'Diferencie $3u^2+1$ y $u+2$ por separado y aplique la regla del producto.'
-    tags: [textbook, Stewart, '3.1', producto]
+    tags: [textbook, Stewart, 3.1, producto]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '9*u**2 + 12*u + 1'
@@ -448,8 +431,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1 (Ejs. 3–32)'
       author: 'Curación: J. J. Rico'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-011
     topic: Derivadas
@@ -469,7 +452,7 @@ exercises:
         - {name: Potencia, points: 6, description: 'Aplica regla de la potencia con exponente racional'}
         - {name: Dominio, points: 2, description: 'Reconoce que $x\neq 0$'}
         - {name: Presentación, points: 2, description: 'Notación clara'}
-    tags: [textbook, Stewart, '3.1', potencia]
+    tags: [textbook, Stewart, 3.1, potencia]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '-2/5*x**(-7/5)'
@@ -477,8 +460,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1'
       author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-012
     topic: Derivadas
@@ -497,16 +480,12 @@ exercises:
         - {name: Resultado, points: 4, description: 'Derivada correcta'}
         - {name: Presentación, points: 2, description: 'Notación clara'}
     hints: ['$(y^n)^\prime = n\,y^{n-1}$']
-    tags: [textbook, Stewart, '3.1']
+    tags: [textbook, Stewart, 3.1]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '3*a*y**2'
       domain: 'all real y'
-    meta:
-      source: 'Stewart 3.1'
-      author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
 
   - id: stewart-3_1-013
     topic: Derivadas
@@ -524,16 +503,12 @@ exercises:
       criteria:
         - {name: Potencia negativa, points: 6, description: 'Reescritura y derivación correctas'}
         - {name: Presentación, points: 4, description: 'Simplifica el resultado'}
-    tags: [textbook, Stewart, '3.1', racional]
+    tags: [textbook, Stewart, 3.1, racional]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '-15/r**4'
       domain: 'r != 0'
-    meta:
-      source: 'Stewart 3.1'
-      author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
 
   - id: stewart-3_1-014
     topic: Derivadas
@@ -552,7 +527,7 @@ exercises:
       criteria:
         - {name: Potencia, points: 6, description: 'Regla de la potencia correcta'}
         - {name: Presentación, points: 4, description: 'Notación y simplificación'}
-    tags: [textbook, Stewart, '3.1', potencia]
+    tags: [textbook, Stewart, 3.1, potencia]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '5/3*x**(2/3)'
@@ -560,35 +535,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1'
       author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
-
-  - id: stewart-3_1-015
-    topic: Derivadas
-    subtopic: Regla de la cadena (potencia compuesta)
-    difficulty: easy
-    format: open-ended
-    statement_md_es: |
-      Calcule la derivada:
-      $$R(a) = (3a + 1)^{2}$$
-    answer_type: symbolic
-    expected_answer: '6(3a+1)'
-    hints: ['Use $(g(a))^2$ con $g(a)=3a+1$.']
-    rubric:
-      total_points: 10
-      criteria:
-        - {name: Cadena simple, points: 6, description: '$2(g)g^\prime$'}
-        - {name: Presentación, points: 4, description: 'Factoriza el resultado'}
-    tags: [textbook, Stewart, '3.1']
-    autocheck:
-      strategy: symbolic_equivalence
-      reference_expr: '6*(3*a+1)'
-      domain: 'all real a'
-    meta:
-      source: 'Stewart 3.1'
-      author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-016
     topic: Derivadas
@@ -608,7 +556,7 @@ exercises:
         - {name: Proceso, points: 6, description: 'Deriva potencia fraccionaria y exponencial'}
         - {name: Dominio, points: 2, description: 'Para la potencia, considere $t>0$'}
         - {name: Presentación, points: 2, description: 'Notación clara'}
-    tags: [textbook, Stewart, '3.1', exponencial, potencia]
+    tags: [textbook, Stewart, 3.1, exponencial, potencia]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '1/4*t**(-3/4) - 4*exp(t)'
@@ -616,8 +564,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1'
       author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-017
     topic: Derivadas
@@ -637,7 +585,7 @@ exercises:
         - {name: Proceso, points: 6, description: 'Transforma a potencia y deriva correctamente'}
         - {name: Dominio, points: 2, description: 'Indique $p>0$ para la derivada de $\sqrt{p}$'}
         - {name: Presentación, points: 2, description: 'Notación clara'}
-    tags: [textbook, Stewart, '3.1', raiz]
+    tags: [textbook, Stewart, 3.1, raiz]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '1/(2*sqrt(p)) - 1'
@@ -645,8 +593,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1'
       author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-018
     topic: Derivadas
@@ -666,7 +614,7 @@ exercises:
         - {name: Producto, points: 6, description: 'Deriva y combina términos correctamente'}
         - {name: Dominio, points: 2, description: '$x\neq 0$ por $x^{-2/3}$ en la derivada'}
         - {name: Presentación, points: 2, description: 'Notación clara'}
-    tags: [textbook, Stewart, '3.1', producto]
+    tags: [textbook, Stewart, 3.1, producto]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '(1/3)*x**(-2/3)*(2+x) + x**(1/3)'
@@ -674,8 +622,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1'
       author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-019
     topic: Derivadas
@@ -695,7 +643,7 @@ exercises:
         - {name: Proceso, points: 6, description: 'Aplica exponencial y potencia negativa'}
         - {name: Dominio, points: 2, description: '$x\neq 0$ por $x^{-1/3}$'}
         - {name: Presentación, points: 2, description: 'Notación clara'}
-    tags: [textbook, Stewart, '3.1', exponencial, potencia]
+    tags: [textbook, Stewart, 3.1, exponencial, potencia]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '3*exp(x) - (4/3)*x**(-4/3)'
@@ -703,8 +651,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1'
       author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-020
     topic: Derivadas
@@ -723,7 +671,7 @@ exercises:
       criteria:
         - {name: Potencia, points: 6, description: 'Derivación correcta de $R^3$'}
         - {name: Presentación, points: 4, description: 'Incluye $\pi$ y simplifica'}
-    tags: [textbook, Stewart, '3.1', geometria, esfera]
+    tags: [textbook, Stewart, 3.1, geometria, esfera]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '4*pi*R**2'
@@ -731,8 +679,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1'
       author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-021
     topic: Derivadas
@@ -744,24 +692,19 @@ exercises:
       $$h(u) = A\,u^{3} + B\,u^{2} + C\,u$$
     answer_type: symbolic
     expected_answer: '3A\,u^{2} + 2B\,u + C'
-    hints:
-      - 'Derive término a término.'
+    hints: ['Derive término a término.']
     rubric:
       total_points: 10
       criteria:
         - {name: Proceso, points: 5, description: 'Regla de la potencia por término'}
         - {name: Resultado, points: 3, description: 'Coeficientes correctos'}
         - {name: Presentación, points: 2, description: 'Orden y claridad'}
-    tags: [textbook, Stewart, '3.1', polinomio]
+    tags: [textbook, Stewart, 3.1, polinomio]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '3*A*u**2 + 2*B*u + C'
       domain: 'all real u'
-    meta:
-      source: 'Stewart 3.1'
-      author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
 
   - id: stewart-3_1-022
     topic: Derivadas
@@ -781,7 +724,7 @@ exercises:
         - {name: Reescritura, points: 4, description: 'Convierte a potencias negativas'}
         - {name: Derivación, points: 4, description: 'Aplica regla de la potencia'}
         - {name: Presentación, points: 2, description: 'Simplifica al final'}
-    tags: [textbook, Stewart, '3.1', raiz, cociente]
+    tags: [textbook, Stewart, 3.1, raiz, cociente]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '-(3 + 2*sqrt(x))/(2*x**(5/2))'
@@ -789,8 +732,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1'
       author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-023
     topic: Derivadas
@@ -807,10 +750,10 @@ exercises:
     rubric:
       total_points: 10
       criteria:
-        - {name: Producto, points: 5, description: "$(fg)'=f'g+fg'$"}
+        - {name: Producto, points: 5, description: '$(fg)^\prime=f^\prime g+fg^\prime$'}
         - {name: Simplificación, points: 3, description: 'Denominador común $2x^{3/2}$'}
         - {name: Presentación, points: 2, description: 'Notación clara'}
-    tags: [textbook, Stewart, '3.1', raiz, cociente]
+    tags: [textbook, Stewart, 3.1, raiz, cociente]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '(3*x**2 + 4*x - 3)/(2*x**(3/2))'
@@ -818,8 +761,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1'
       author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-024
     topic: Derivadas
@@ -838,7 +781,7 @@ exercises:
       criteria:
         - {name: Potencia/raíz, points: 6, description: 'Aplica $d/dt[t^{m}] = m t^{m-1}$'}
         - {name: Presentación, points: 4, description: 'Expresa raíces en forma estándar'}
-    tags: [textbook, Stewart, '3.1', raiz]
+    tags: [textbook, Stewart, 3.1, raiz]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: 'sqrt(5)/(2*sqrt(t)) - sqrt(7)/t**2'
@@ -846,8 +789,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1'
       author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-025
     topic: Derivadas
@@ -859,23 +802,18 @@ exercises:
       $$j(x) = x^{2.4} + e^{2.4}$$
     answer_type: symbolic
     expected_answer: '2.4\,x^{1.4}'
-    hints:
-      - 'La derivada de una constante ($e^{2.4}$) es 0.'
+    hints: ['La derivada de una constante ($e^{2.4}$) es 0.']
     rubric:
       total_points: 10
       criteria:
         - {name: Potencia real, points: 6, description: '$d/dx[x^{m}] = m x^{m-1}$'}
         - {name: Presentación, points: 4, description: 'Usa exponentes decimales correctamente'}
-    tags: [textbook, Stewart, '3.1']
+    tags: [textbook, Stewart, 3.1]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '2.4*x**1.4'
       domain: 'all real x'
-    meta:
-      source: 'Stewart 3.1'
-      author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
 
   - id: stewart-3_1-026
     topic: Derivadas
@@ -887,23 +825,18 @@ exercises:
       $$y(v) = a\,e^{v} + \dfrac{b}{v} + \dfrac{c}{v^{2}}$$
     answer_type: symbolic
     expected_answer: 'a\,e^{v} - \dfrac{b}{v^{2}} - \dfrac{2c}{v^{3}}'
-    hints:
-      - 'Combine regla exponencial y potencia.'
+    hints: ['Combine regla exponencial y potencia.']
     rubric:
       total_points: 10
       criteria:
         - {name: Proceso, points: 6, description: 'Deriva cada término correctamente'}
         - {name: Presentación, points: 4, description: 'Simplifica signos y potencias'}
-    tags: [textbook, Stewart, '3.1', racional, exponencial]
+    tags: [textbook, Stewart, 3.1, racional, exponencial]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: 'a*exp(v) - b/v**2 - 2*c/v**3'
       domain: 'v != 0'
-    meta:
-      source: 'Stewart 3.1'
-      author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
 
   - id: stewart-3_1-027
     topic: Derivadas
@@ -915,24 +848,19 @@ exercises:
       $$G(q) = \big(\sqrt{\,1 + q^{2}\,}\big)^{2}$$
     answer_type: symbolic
     expected_answer: '2q'
-    hints:
-      - 'Antes de derivar, simplifique $G(q)=1+q^{2}$.'
+    hints: ['Antes de derivar, simplifique $G(q)=1+q^{2}$.']
     rubric:
       total_points: 10
       criteria:
         - {name: Simplificación, points: 5, description: 'Reconoce que $(\sqrt{\cdot})^{2}$ se simplifica'}
         - {name: Derivación, points: 3, description: 'Deriva $1+q^2$'}
         - {name: Presentación, points: 2, description: 'Notación clara'}
-    tags: [textbook, Stewart, '3.1']
+    tags: [textbook, Stewart, 3.1]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '2*q'
       domain: 'all real q'
-    meta:
-      source: 'Stewart 3.1'
-      author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
 
   - id: stewart-3_1-028
     topic: Derivadas
@@ -944,24 +872,19 @@ exercises:
       $$F(z) = \dfrac{A + Bz + Cz^{2}}{z^{2}}$$
     answer_type: symbolic
     expected_answer: '-\dfrac{2A}{z^{3}} - \dfrac{B}{z^{2}}'
-    hints:
-      - 'Escriba $Az^{-2} + Bz^{-1} + C$.'
+    hints: ['Escriba $Az^{-2} + Bz^{-1} + C$.']
     rubric:
       total_points: 10
       criteria:
         - {name: Reescritura, points: 5, description: 'Potencias negativas'}
         - {name: Derivación, points: 3, description: 'Aplica la regla de la potencia'}
         - {name: Presentación, points: 2, description: 'Notación clara'}
-    tags: [textbook, Stewart, '3.1', racional]
+    tags: [textbook, Stewart, 3.1, racional]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '-2*A/z**3 - B/z**2'
       domain: 'z != 0'
-    meta:
-      source: 'Stewart 3.1'
-      author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+    meta: {source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'}
 
   - id: stewart-3_1-029
     topic: Derivadas
@@ -981,7 +904,7 @@ exercises:
         - {name: Reescritura, points: 4, description: 'Divide y reduce potencias'}
         - {name: Derivación, points: 4, description: 'Potencia fraccionaria + exponencial'}
         - {name: Presentación, points: 2, description: 'Notación clara'}
-    tags: [textbook, Stewart, '3.1', raiz, exponencial]
+    tags: [textbook, Stewart, 3.1, raiz, exponencial]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '-(2/3)*v**(-5/3) - 2*exp(v)'
@@ -989,8 +912,8 @@ exercises:
     meta:
       source: 'Stewart Cálculo, Sección 3.1'
       author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      created: '2025-10-04'
+      updated: '2025-10-04'
 
   - id: stewart-3_1-030
     topic: Derivadas
@@ -1002,24 +925,20 @@ exercises:
       $$D(t) = \dfrac{1 + 16t^{2}}{\sqrt{\,4t^{3}\,}}$$
     answer_type: symbolic
     expected_answer: '\dfrac{16t^{2} - 3}{4\,t^{5/2}}'
-    hints:
-      - 'Reescriba $D(t)=\tfrac{1}{2}(1+16t^{2})t^{-3/2}$ y derive.'
+    hints: ['Reescriba $D(t)=\tfrac{1}{2}(1+16t^{2})t^{-3/2}$ y derive.']
     rubric:
       total_points: 10
       criteria:
         - {name: Reescritura, points: 4, description: 'Convierte raíz y cociente a potencias'}
         - {name: Derivación, points: 4, description: 'Producto + potencia'}
         - {name: Presentación, points: 2, description: 'Simplifica al final'}
-    tags: [textbook, Stewart, '3.1', raiz, racional]
+    tags: [textbook, Stewart, 3.1, raiz, racional]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '(16*t**2 - 3)/(4*t**(5/2))'
       domain: 't > 0'
     meta:
-      source: 'Stewart 3.1'
-      author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'
 
   - id: stewart-3_1-031
     topic: Derivadas
@@ -1031,23 +950,19 @@ exercises:
       $$z(y) = \dfrac{A}{y^{10}} + B\,e^{y}$$
     answer_type: symbolic
     expected_answer: '-\dfrac{10A}{y^{11}} + B\,e^{y}'
-    hints:
-      - '$A y^{-10}$ y $Be^{y}$ por separado.'
+    hints: ['$A y^{-10}$ y $Be^{y}$ por separado.']
     rubric:
       total_points: 10
       criteria:
         - {name: Proceso, points: 6, description: 'Aplica potencia y exponencial'}
         - {name: Presentación, points: 4, description: 'Simplifica signos'}
-    tags: [textbook, Stewart, '3.1', exponencial, racional]
+    tags: [textbook, Stewart, 3.1, exponencial, racional]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '-10*A/y**11 + B*exp(y)'
       domain: 'y != 0'
     meta:
-      source: 'Stewart 3.1'
-      author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
+      source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'
 
   - id: stewart-3_1-032
     topic: Derivadas
@@ -1059,147 +974,16 @@ exercises:
       $$y(x) = e^{\,x^{11}} + 1$$
     answer_type: symbolic
     expected_answer: '11x^{10}\,e^{\,x^{11}}'
-    hints:
-      - 'Cadena: $d/dx\,e^{g(x)} = g^\prime(x)\,e^{g(x)}$.'
+    hints: ['Cadena: $d/dx\,e^{g(x)} = g^\prime(x)\,e^{g(x)}$.']
     rubric:
       total_points: 10
       criteria:
         - {name: Cadena, points: 6, description: 'Deriva $x^{11}$ y multiplica por $e^{x^{11}}$'}
         - {name: Presentación, points: 4, description: 'Notación clara'}
-    tags: [textbook, Stewart, '3.1', exponencial]
+    tags: [textbook, Stewart, 3.1, exponencial]
     autocheck:
       strategy: symbolic_equivalence
       reference_expr: '11*x**10*exp(x**11)'
       domain: 'all real x'
     meta:
-      source: 'Stewart 3.1'
-      author: 'Curación JJR'
-      created: "2025-10-04"
-      updated: "2025-10-04"
-
-  - id: stewart-3_1-033
-    topic: Derivadas
-    subtopic: Recta tangente (polinomial)
-    difficulty: easy
-    format: open-ended
-    statement_md_es: |
-      Encuentre la **ecuación de la recta tangente** a la curva en el punto dado.
-      \[
-        y = 2x^{3} - 2x^{2} + 3, \qquad (1,\,3)
-      \]
-    answer_type: text
-    expected_answer: |
-      y - 3 = 2(x - 1) \Rightarrow y = 2x + 1
-    rubric:
-      total_points: 10
-      criteria:
-        - {name: Derivada, points: 5, description: "f'(x)=6x^2-4x y f'(1)=2"}
-        - {name: Ecuación punto-pendiente, points: 3, description: "y-3=2(x-1)"}
-        - {name: Presentación, points: 2, description: "Notación clara"}
-    hints:
-      - "Use $f'(x)$ y la forma punto–pendiente: $y-y_0=m(x-x_0)$."
-    tags: ["textbook", "Stewart", "3.1", "tangent-line"]
-    autocheck:
-      strategy: text
-      reference_expr: "y = 2x + 1"
-    meta:
-      source: "Stewart Cálculo, Sección 3.1"
-      author: "Curación JJR"
-      created: "2025-10-05"
-      updated: "2025-10-05"
-
-  - id: stewart-3_1-034
-    topic: Derivadas
-    subtopic: Recta tangente (exponencial + lineal)
-    difficulty: easy
-    format: open-ended
-    statement_md_es: |
-      Encuentre la **ecuación de la recta tangente** a la curva en el punto dado.
-      \[
-        y = 2e^{x} + x,\qquad (0,\,2)
-      \]
-    answer_type: text
-    expected_answer: |
-      f'(x)=2e^{x}+1 \Rightarrow f'(0)=3;\; y-2=3(x-0) \Rightarrow y=3x+2
-    rubric:
-      total_points: 10
-      criteria:
-        - {name: Derivada, points: 5, description: "f'(x)=2e^{x}+1 y f'(0)=3"}
-        - {name: Ecuación punto-pendiente, points: 3, description: "y-2=3x"}
-        - {name: Presentación, points: 2, description: "Notación clara"}
-    hints:
-      - "Recuerde: $(e^{x})'=e^{x}$ y $(x)'=1$."
-    tags: ["textbook", "Stewart", "3.1", "tangent-line", "exponential"]
-    autocheck:
-      strategy: text
-      reference_expr: "y = 3x + 2"
-    meta:
-      source: "Stewart Cálculo, Sección 3.1"
-      author: "Curación JJR"
-      created: "2025-10-05"
-      updated: "2025-10-05"
-
-  - id: stewart-3_1-035
-    topic: Derivadas
-    subtopic: Recta tangente (polinomial)
-    difficulty: easy
-    format: open-ended
-    statement_md_es: |
-      Encuentre la **ecuación de la recta tangente** a la curva en el punto dado.
-      \[
-        y = x^{2} - 2x + 3,\qquad (2,\,3)
-      \]
-    answer_type: text
-    expected_answer: |
-      f'(x)=2x-2 \Rightarrow f'(2)=2;\; y-3=2(x-2) \Rightarrow y=2x-1
-    rubric:
-      total_points: 10
-      criteria:
-        - {name: Derivada, points: 5, description: "f'(x)=2x-2 y f'(2)=2"}
-        - {name: Ecuación punto-pendiente, points: 3, description: "y-3=2(x-2)"}
-        - {name: Presentación, points: 2, description: "Notación clara"}
-    hints:
-      - "Si es cuadrática, derive término a término y evalúe en $x_0$."
-    tags: ["textbook", "Stewart", "3.1", "tangent-line"]
-    autocheck:
-      strategy: text
-      reference_expr: "y = 2x - 1"
-    meta:
-      source: "Stewart Cálculo, Sección 3.1"
-      author: "Curación JJR"
-      created: "2025-10-05"
-      updated: "2025-10-05"
-
-  - id: stewart-3_1-036
-    topic: Derivadas
-    subtopic: Recta tangente (exponencial de base 4 menos lineal)
-    difficulty: easy
-    format: open-ended
-    statement_md_es: |
-      Encuentre la **ecuación de la recta tangente** a la curva en el punto dado.
-      \[
-        y = 4^{x} - x - 3,\qquad (1,\,0)
-      \]
-    answer_type: text
-    expected_answer: |
-      y = (4\ln 4 - 1)(x - 1)
-    hints:
-      - "Derive $y' = 4^{x}\ln 4 - 1$."
-      - "Evalúe la pendiente en $x=1$: $m = 4\ln 4 - 1$."
-      - "Use la forma punto–pendiente $y - y_1 = m(x - x_1)$."
-    rubric:
-      total_points: 10
-      criteria:
-        - {name: Derivación, points: 4, description: 'Aplica correctamente la regla de la exponencial $a^{x}$.'}
-        - {name: Sustitución, points: 3, description: 'Evalúa pendiente $m=4\ln 4 - 1$ en $x=1$.'}
-        - {name: Ecuación, points: 3, description: 'Construye la recta tangente con forma punto-pendiente y notación clara.'}
-    tags: [textbook, Stewart, '3.1', tangente, exponencial]
-    autocheck:
-      strategy: text
-      reference_expr: "y = (4*ln(4) - 1)*(x - 1)"
-      domain: 'all real x'
-    meta:
-      source: 'Stewart Cálculo, Sección 3.1'
-      author: 'Curación JJR'
-      created: "2025-10-06"
-      updated: "2025-10-06"
+      source: 'Stewart 3.1', author: 'Curación JJR', created: '2025-10-04', updated: '2025-10-04'
