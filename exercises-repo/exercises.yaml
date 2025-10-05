@@ -1803,7 +1803,7 @@ exercises:
       - {name: Ecuación punto–pendiente, points: 3, description: "y-3=2(x-1)"}
       - {name: Presentación, points: 2, description: "Notación clara"}
   hints:
-    - "Use \(f'(x)\) y la forma punto–pendiente: \(y-y_0=m(x-x_0)\)."
+    - Use \(f'(x)\) y la forma punto–pendiente: \(y-y_0=m(x-x_0)\).
   tags: [textbook, Stewart, "3.1", tangent-line]
   autocheck:
     strategy: text
