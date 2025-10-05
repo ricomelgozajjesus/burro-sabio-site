@@ -1787,10 +1787,9 @@ exercises:
   difficulty: easy
   format: open-ended
   statement_md_es: |
-    Encuentre la **ecuación de la recta tangente** a la curva en el punto dado.
-    \[
-      y = 2x^{3} - 2x^{2} + 3,\qquad (1,\,3)
-    \]
+             Encuentre la **ecuación de la recta tangente** a la curva en el punto dado.
+
+              $$y = 2x^{3} - 2x^{2} + 3,\qquad (1,\,3)$$
   answer_type: text
   expected_answer: |
     Derivada: \(f'(x)=6x^{2}-4x\Rightarrow f'(1)=2\).
