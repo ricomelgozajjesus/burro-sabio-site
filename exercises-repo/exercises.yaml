@@ -1923,3 +1923,100 @@ exercises:
     author: "Curación JJR"
     created: "2025-10-06"
     updated: "2025-10-06"
+
+- id: stewart-3_1-037
+  topic: Derivadas
+  subtopic: Rectas tangente y normal (polinómica)
+  difficulty: easy
+  format: open-ended
+  statement_md_es: |
+    Encuentre las **ecuaciones de las rectas tangente y normal** a la curva en el punto dado.
+
+    $$
+    y = x^{2} - x^{4}, \qquad (1, 0)
+    $$
+  answer_type: text
+  expected_answer: |
+    Tangente: \(y - 0 = -2\,(x - 1)\) \(\Rightarrow\) \(y = -2x + 2\)
+
+    Normal: \(y - 0 = \tfrac{1}{2}\,(x - 1)\) \(\Rightarrow\) \(y = \tfrac{1}{2}x - \tfrac{1}{2}\)
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Derivada
+        points: 4
+        description: \(f'(x)=2x-4x^{3}\) y \(f'(1)=-2\)
+      - name: Recta tangente
+        points: 3
+        description: Usa forma punto–pendiente con \((1,0)\)
+      - name: Recta normal
+        points: 3
+        description: Pendiente perpendicular \(m_n=-1/m=\tfrac{1}{2}\) y forma punto–pendiente
+  hints:
+    - Derive \(y=x^{2}-x^{4}\) para obtener \(f'(x)=2x-4x^{3}\).
+    - Evalúe la pendiente en \(x=1\): \(m=-2\).
+    - La recta normal tiene pendiente \(m_n=-1/m=\tfrac{1}{2}\).
+  solution_steps_md_es: |
+    \(f'(x)=2x-4x^{3}\Rightarrow f'(1)=2-4=-2\).
+    Tangente en \((1,0)\): \(y-0=-2(x-1)\Rightarrow y=-2x+2\).
+    Normal (pendiente \(m_n=\tfrac{1}{2}\)): \(y-0=\tfrac{1}{2}(x-1)\Rightarrow y=\tfrac{1}{2}x-\tfrac{1}{2}\).
+  tags: ["textbook", "Stewart", "3.1", "tangent-line", "normal-line", "polynomial"]
+  autocheck:
+    strategy: text
+    reference_expr: |
+      Tangente: y = -2x + 2
+      Normal: y = 1/2 x - 1/2
+  meta:
+    source: "Stewart Cálculo, Sección 3.1"
+    author: "Curación JJR"
+    created: "2025-10-06"
+    updated: "2025-10-06"
+
+- id: stewart-3_1-038
+  topic: Derivadas
+  subtopic: Rectas tangente y normal (implícita cúbica)
+  difficulty: easy
+  format: open-ended
+  statement_md_es: |
+    Encuentre las **ecuaciones de las rectas tangente y normal** a la curva en el punto dado.
+
+    $$
+    y^{2} = x^{3}, \qquad (1, 1)
+    $$
+  answer_type: text
+  expected_answer: |
+    Tangente: \(y - 1 = \tfrac{3}{2}(x - 1)\) \(\Rightarrow\) \(y = \tfrac{3}{2}x - \tfrac{1}{2}\)
+
+    Normal: \(y - 1 = -\tfrac{2}{3}(x - 1)\) \(\Rightarrow\) \(y = -\tfrac{2}{3}x + \tfrac{5}{3}\)
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Derivada implícita
+        points: 4
+        description: De \(2yy' = 3x^{2}\) a \(y'=\dfrac{3x^{2}}{2y}\) y \(y'(1,1)=\tfrac{3}{2}\)
+      - name: Recta tangente
+        points: 3
+        description: Usa forma punto–pendiente con \((1,1)\)
+      - name: Recta normal
+        points: 3
+        description: Pendiente perpendicular \(m_n=-1/m=-\tfrac{2}{3}\) y forma punto–pendiente
+  hints:
+    - Diferencie implícitamente \(y^{2}=x^{3}\) para hallar \(y'\).
+    - Evalúe \(y'(1,1)\) para la pendiente de la tangente.
+    - La pendiente de la normal es \(m_n=-1/m\).
+  solution_steps_md_es: |
+    De \(y^{2}=x^{3}\): \(2yy' = 3x^{2}\Rightarrow y'=\dfrac{3x^{2}}{2y}\).
+    En \((1,1)\): \(m=\tfrac{3}{2}\).
+    Tangente: \(y-1=\tfrac{3}{2}(x-1)\Rightarrow y=\tfrac{3}{2}x-\tfrac{1}{2}\).
+    Normal: \(m_n=-\tfrac{2}{3}\Rightarrow y-1=-\tfrac{2}{3}(x-1)\Rightarrow y=-\tfrac{2}{3}x+\tfrac{5}{3}\).
+  tags: ["textbook", "Stewart", "3.1", "tangent-line", "normal-line", "implicit"]
+  autocheck:
+    strategy: text
+    reference_expr: |
+      Tangente: y = 3/2 x - 1/2
+      Normal: y = -2/3 x + 5/3
+  meta:
+    source: "Stewart Cálculo, Sección 3.1"
+    author: "Curación JJR"
+    created: "2025-10-06"
+    updated: "2025-10-06"
