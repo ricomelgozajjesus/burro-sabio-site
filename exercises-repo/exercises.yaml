@@ -2020,3 +2020,364 @@ exercises:
     author: "Curación JJR"
     created: "2025-10-06"
     updated: "2025-10-06"
+- id: der-prod-003
+  topic: Derivatives
+  subtopic: Product Rule
+  difficulty: easy
+  format: open-ended
+  statement_md_es: "Sea $f(x)=(3x^{2}-5x)e^{x}$. Calcula $f'(x)$."
+  statement_md_en: "Let $f(x)=(3x^{2}-5x)e^{x}$. Compute $f'(x)$."
+  answer_type: symbolic
+  expected_answer: (3x^2 + x - 5)e^x
+  accepted_equivalents:
+    - e^x*(3x^2 + x - 5)
+    - (6x-5)e^x + (3x^2-5x)e^x
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Product rule structure
+        points: 5
+        description: "Apply $(uv)'=u'v+uv'$ correctly."
+      - name: Algebraic simplification
+        points: 3
+        description: "Combine terms to $(3x^2 + x -5)e^x$."
+      - name: Presentation
+        points: 2
+        description: "Clear notation / LaTeX."
+  hints:
+    - "Identifica $u=3x^2-5x$ y $v=e^x$."
+    - "$u'=6x-5$, $v'=e^x$."
+  solution_steps_md_es: |
+    Con $u=3x^2-5x$ y $v=e^x$, entonces
+    $$
+    f'(x)=u'v+uv'= (6x-5)e^x + (3x^2-5x)e^x = (3x^2 + x - 5)e^x.
+    $$
+  tags: [product-rule, exponential]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: (3*x**2 + x - 5)*exp(x)
+    domain: all real x
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
+---
+- id: der-prod-004
+  topic: Derivatives
+  subtopic: Product Rule (with roots)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: "Sea $t(x)=(x+2\\sqrt{x})e^{x}$. Calcula $t'(x)$."
+  statement_md_en: "Let $t(x)=(x+2\\sqrt{x})e^{x}$. Compute $t'(x)$."
+  answer_type: symbolic
+  expected_answer: (x + 2*sqrt(x) + 1 + 1/sqrt(x)) * e^x
+  accepted_equivalents:
+    - e^x*(x+2*sqrt(x)) + e^x*(1 + 1/sqrt(x))
+    - e^x*(x + 2*sqrt(x) + 1 + 1/sqrt(x))
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Product rule
+        points: 5
+        description: "Deriva $e^x$ y $x+2\\sqrt{x}$ correctamente."
+      - name: Chain/power on root
+        points: 3
+        description: "$(\\sqrt{x})' = 1/(2\\sqrt{x})$ ⇒ $(2\\sqrt{x})' = 1/\\sqrt{x}$."
+      - name: Presentation
+        points: 2
+        description: "Notación clara / LaTeX."
+  hints:
+    - "Escribe $u=x+2x^{1/2}$."
+    - "Usa $(uv)'=u'v+uv'$ y $e^x'=e^x$."
+  solution_steps_md_es: |
+    $u=x+2x^{1/2}$, $u'=1+\\tfrac{1}{\\sqrt{x}}$. Entonces
+    $$
+    t'(x)=u'e^x + u e^x = (1+\\tfrac{1}{\\sqrt{x}} + x + 2\\sqrt{x})e^x.
+    $$
+  tags: [product-rule, exponential, roots]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: (x + 2*sqrt(x) + 1 + 1/sqrt(x))*exp(x)
+    domain: x>0
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
+---
+- id: der-quot-005
+  topic: Derivatives
+  subtopic: Quotient Rule
+  difficulty: easy
+  format: open-ended
+  statement_md_es: "Sea $y=\\dfrac{e^{x}}{x^{2}}$. Calcula $\\dfrac{dy}{dx}$."
+  statement_md_en: "Let $y=\\dfrac{e^{x}}{x^{2}}$. Compute $\\dfrac{dy}{dx}$."
+  answer_type: symbolic
+  expected_answer: e^x*(x-2)/x^3
+  accepted_equivalents:
+    - (e^x*x^2 - e^x*2*x)/x^4
+    - e^x*(x-2)/x^3
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Quotient rule setup
+        points: 5
+      - name: Simplification
+        points: 3
+        description: "Reduce a $e^x\\dfrac{x-2}{x^3}$."
+      - name: Domain note
+        points: 2
+        description: "Reconoce $x\\neq 0$."
+  hints:
+    - "Usa $(f/g)'=(f'g - fg')/g^2$."
+  solution_steps_md_es: |
+    $$
+    y'=\frac{e^x x^2 - e^x(2x)}{x^4} = \frac{e^x(x^2-2x)}{x^4}
+    = e^x\frac{x-2}{x^3}.
+    $$
+  tags: [quotient-rule, exponential]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: exp(x)*(x-2)/x**3
+    domain: x!=0
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
+---
+- id: der-quot-006
+  topic: Derivatives
+  subtopic: Quotient Rule
+  difficulty: easy
+  format: open-ended
+  statement_md_es: "Sea $y=\\dfrac{e^{x}}{1+x}$. Calcula $\\dfrac{dy}{dx}$."
+  statement_md_en: "Let $y=\\dfrac{e^{x}}{1+x}$. Compute $\\dfrac{dy}{dx}$."
+  answer_type: symbolic
+  expected_answer: e^x * x / (1+x)^2
+  accepted_equivalents:
+    - (e^x*(1+x) - e^x)/ (1+x)^2
+    - e^x*x/(1+x)^2
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Quotient rule
+        points: 5
+      - name: Algebra
+        points: 3
+        description: "Cancela $(1+x)$ correctamente."
+      - name: Presentation
+        points: 2
+  hints:
+    - "$(1+x)'=1$."
+  solution_steps_md_es: |
+    $$
+    y'=\frac{e^x(1+x) - e^x}{(1+x)^2}=\frac{e^xx}{(1+x)^2}.
+    $$
+  tags: [quotient-rule, exponential]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: exp(x)*x/(1+x)**2
+    domain: x!=-1
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
+---
+- id: der-quot-007
+  topic: Derivatives
+  subtopic: Quotient Rule (rational)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: "Sea $t(x)=\\dfrac{3x^{2}+1}{2x+1}$. Calcula $t'(x)$."
+  statement_md_en: "Let $t(x)=\\dfrac{3x^{2}+1}{2x+1}$. Compute $t'(x)$."
+  answer_type: symbolic
+  expected_answer: (6x**2 + 6x - 2) / (2x + 1)**2
+  accepted_equivalents:
+    - ( (6x)*(2x+1) - (3x^2+1)*2 ) / (2x+1)^2
+    - 2*(3x^2+3x-1)/(2x+1)^2
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Quotient rule
+        points: 5
+      - name: Algebra
+        points: 3
+      - name: Presentation
+        points: 2
+  hints:
+    - "Usa $(f/g)'=(f'g - fg')/g^2$ con $f=3x^2+1$, $g=2x+1$."
+  solution_steps_md_es: |
+    $$
+    t'=\frac{(6x)(2x+1) - (3x^2+1)\cdot2}{(2x+1)^2}
+      = \frac{6x^2+6x-2}{(2x+1)^2}.
+    $$
+  tags: [quotient-rule, rational]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: (6*x**2 + 6*x - 2)/(2*x + 1)**2
+    domain: x!=-1/2
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
+---
+- id: der-quot-008
+  topic: Derivatives
+  subtopic: Quotient Rule (rational)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: "Sea $f(t)=\\dfrac{2t}{4-t^{2}}$. Calcula $f'(t)$."
+  statement_md_en: "Let $f(t)=\\dfrac{2t}{4-t^{2}}$. Compute $f'(t)$."
+  answer_type: symbolic
+  expected_answer: (8 + 2*t**2) / (4 - t**2)**2
+  accepted_equivalents:
+    - (2*(4-t^2) - 2*t*(-2*t))/(4-t^2)^2
+    - 2*(4 + t^2)/(4 - t^2)^2
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Quotient rule
+        points: 5
+      - name: Derivative of denominator
+        points: 3
+        description: "$(4-t^2)'=-2t$."
+      - name: Presentation
+        points: 2
+  hints:
+    - "Identifica $u=2t$, $v=4-t^2$."
+  solution_steps_md_es: |
+    $$
+    f'=\frac{2(4-t^2) - (2t)(-2t)}{(4-t^2)^2}
+      = \frac{8 - 2t^2 + 4t^2}{(4-t^2)^2}
+      = \frac{8+2t^2}{(4-t^2)^2}.
+    $$
+  tags: [quotient-rule, rational]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: (8 + 2*t**2)/(4 - t**2)**2
+    domain: t**2!=4
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
+---
+- id: der-mixed-012
+  topic: Derivatives
+  subtopic: Product Rule & Exponential
+  difficulty: medium
+  format: open-ended
+  statement_md_es: "Sea $f(z)=(1-e^{z})(z+e^{z})$. Calcula $f'(z)$."
+  statement_md_en: "Let $f(z)=(1-e^{z})(z+e^{z})$. Compute $f'(z)$."
+  answer_type: symbolic
+  expected_answer: ( -e^z )*(z+e^z) + (1 - e^z)*(1 + e^z)
+  accepted_equivalents:
+    - "-e^z(z+e^z) + (1-e^z)(1+e^z)"
+    - "1 + e^z - z e^z - 2e^{2z}"
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Product rule
+        points: 5
+      - name: Derivative of $e^{z}$
+        points: 3
+      - name: Presentation
+        points: 2
+  hints:
+    - "Usa $(uv)'=u'v+uv'$ con $u=1-e^z$, $v=z+e^z$."
+  solution_steps_md_es: |
+    $u=1-e^z\\Rightarrow u'=-e^z$, $v=z+e^z\\Rightarrow v'=1+e^z$.
+    $$
+    f' = u'v + uv' = -e^z(z+e^z) + (1-e^z)(1+e^z).
+    $$
+    Se puede expandir si se desea.
+  tags: [product-rule, exponential]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: -exp(z)*(z+exp(z)) + (1-exp(z))*(1+exp(z))
+    domain: all real z
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
+---
+- id: der-quot-013
+  topic: Derivatives
+  subtopic: Quotient Rule (rational)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: "Sea $y=\\dfrac{x^{2}+1}{x^{3}+1}$. Calcula $\\dfrac{dy}{dx}$."
+  statement_md_en: "Let $y=\\dfrac{x^{2}+1}{x^{3}+1}$. Compute $\\dfrac{dy}{dx}$."
+  answer_type: symbolic
+  expected_answer: [(2x)(x^3+1) - (x^2+1)(3x^2)]/(x^3+1)^2
+  accepted_equivalents:
+    - (2*x*(x**3+1) - (x**2+1)*3*x**2)/(x**3+1)**2
+    - (2*x*(x**3+1) - 3*x**2*(x**2+1))/(x**3+1)**2
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Quotient rule
+        points: 6
+      - name: Algebraic care
+        points: 2
+      - name: Presentation
+        points: 2
+  hints:
+    - "$f=x^2+1$, $g=x^3+1$; usa $(f/g)'=(f'g-fg')/g^2$."
+  solution_steps_md_es: |
+    $$
+    y'=\frac{2x(x^3+1) - (x^2+1)\\cdot 3x^2}{(x^3+1)^2}.
+    $$
+  tags: [quotient-rule, rational]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: (2*x*(x**3+1) - (x**2+1)*3*x**2)/(x**3+1)**2
+    domain: x**3!=-1
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
+---
+- id: der-prodsec-027
+  topic: Derivatives
+  subtopic: Higher Derivatives (product with exp)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: "Sea $f(x)=(x^{3}+1)e^{x}$. Calcula $f'(x)$ y $f''(x)$."
+  statement_md_en: "Let $f(x)=(x^{3}+1)e^{x}$. Compute $f'(x)$ and $f''(x)$."
+  answer_type: symbolic
+  expected_answer: 
+    first: (x^3 + 3x^2 + 1) * e^x
+    second: (x^3 + 6x^2 + 6x + 1) * e^x
+  accepted_equivalents:
+    - first: e^x*(x^3 + 3x^2 + 1)
+      second: e^x*(x^3 + 6x^2 + 6x + 1)
+  rubric:
+    total_points: 12
+    criteria:
+      - name: First derivative via product rule
+        points: 4
+      - name: Second derivative correctness
+        points: 6
+      - name: Presentation
+        points: 2
+  hints:
+    - "Primero halla $f'$ con regla del producto; luego deriva de nuevo."
+    - "$(e^x)'=e^x$ en ambas ocasiones."
+  solution_steps_md_es: |
+    $$
+    f'=(3x^2)e^x + (x^3+1)e^x = (x^3+3x^2+1)e^x.
+    $$
+    $$
+    f'' = (3x^2+6x)e^x + (x^3+3x^2+1)e^x
+        = (x^3 + 6x^2 + 6x + 1)e^x.
+    $$
+  tags: [product-rule, higher-derivatives, exponential]
+  autocheck:
+    strategy: composite
+    reference_expr:
+      first: (x**3 + 3*x**2 + 1)*exp(x)
+      second: (x**3 + 6*x**2 + 6*x + 1)*exp(x)
+    domain: all real x
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
