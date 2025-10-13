@@ -2020,3 +2020,44 @@ exercises:
     author: "Curación JJR"
     created: "2025-10-06"
     updated: "2025-10-06"
+- id: der-prod-003
+  topic: Derivatives
+  subtopic: Product Rule
+  difficulty: easy
+  format: open-ended
+  statement_md_es: "Sea $f(x)=(3x^{2}-5x)e^{x}$. Calcula $f'(x)$."
+  statement_md_en: "Let $f(x)=(3x^{2}-5x)e^{x}$. Compute $f'(x)$."
+  answer_type: symbolic
+  expected_answer: (3x^2 + x - 5)e^x
+  accepted_equivalents:
+    - e^x*(3x^2 + x - 5)
+    - (6x-5)e^x + (3x^2-5x)e^x
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Product rule structure
+        points: 5
+        description: "Apply $(uv)'=u'v+uv'$ correctly."
+      - name: Algebraic simplification
+        points: 3
+        description: "Combine terms to $(3x^2 + x -5)e^x$."
+      - name: Presentation
+        points: 2
+        description: "Clear notation / LaTeX."
+  hints:
+    - "Identifica $u=3x^2-5x$ y $v=e^x$."
+    - "$u'=6x-5$, $v'=e^x$."
+  solution_steps_md_es: |
+    Con $u=3x^2-5x$ y $v=e^x$, entonces
+    $$
+    f'(x)=u'v+uv'= (6x-5)e^x + (3x^2-5x)e^x = (3x^2 + x - 5)e^x.
+    $$
+  tags: [product-rule, exponential]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: (3*x**2 + x - 5)*exp(x)
+    domain: all real x
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
