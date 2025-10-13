@@ -2061,3 +2061,121 @@ exercises:
     author: BS
     created: 2025-10-13
     updated: 2025-10-13
+- id: der-prod-004
+  topic: Derivatives
+  subtopic: Product Rule (with roots)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: "Sea $t(x)=(x+2\\sqrt{x})e^{x}$. Calcula $t'(x)$."
+  statement_md_en: "Let $t(x)=(x+2\\sqrt{x})e^{x}$. Compute $t'(x)$."
+  answer_type: symbolic
+  expected_answer: (x + 2*sqrt(x) + 1 + 1/sqrt(x)) * e^x
+  accepted_equivalents:
+    - e^x*(x+2*sqrt(x)) + e^x*(1 + 1/sqrt(x))
+    - e^x*(x + 2*sqrt(x) + 1 + 1/sqrt(x))
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Product rule
+        points: 5
+        description: "Deriva $e^x$ y $x+2\\sqrt{x}$ correctamente."
+      - name: Chain/power on root
+        points: 3
+        description: "$(\\sqrt{x})' = 1/(2\\sqrt{x})$ ⇒ $(2\\sqrt{x})' = 1/\\sqrt{x}$."
+      - name: Presentation
+        points: 2
+        description: "Notación clara / LaTeX."
+  hints:
+    - "Escribe $u=x+2x^{1/2}$."
+    - "Usa $(uv)'=u'v+uv'$ y $e^x'=e^x$."
+  solution_steps_md_es: |
+    $u=x+2x^{1/2}$, $u'=1+\\tfrac{1}{\\sqrt{x}}$. Entonces
+    $$
+    t'(x)=u'e^x + u e^x = (1+\\tfrac{1}{\\sqrt{x}} + x + 2\\sqrt{x})e^x.
+    $$
+  tags: [product-rule, exponential, roots]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: (x + 2*sqrt(x) + 1 + 1/sqrt(x))*exp(x)
+    domain: x>0
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
+- id: der-quot-005
+  topic: Derivatives
+  subtopic: Quotient Rule
+  difficulty: easy
+  format: open-ended
+  statement_md_es: "Sea $y=\\dfrac{e^{x}}{x^{2}}$. Calcula $\\dfrac{dy}{dx}$."
+  statement_md_en: "Let $y=\\dfrac{e^{x}}{x^{2}}$. Compute $\\dfrac{dy}{dx}$."
+  answer_type: symbolic
+  expected_answer: e^x*(x-2)/x^3
+  accepted_equivalents:
+    - (e^x*x^2 - e^x*2*x)/x^4
+    - e^x*(x-2)/x^3
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Quotient rule setup
+        points: 5
+      - name: Simplification
+        points: 3
+        description: "Reduce a $e^x\\dfrac{x-2}{x^3}$."
+      - name: Domain note
+        points: 2
+        description: "Reconoce $x\\neq 0$."
+  hints:
+    - "Usa $(f/g)'=(f'g - fg')/g^2$."
+  solution_steps_md_es: |
+    $$
+    y'=\frac{e^x x^2 - e^x(2x)}{x^4} = \frac{e^x(x^2-2x)}{x^4}
+    = e^x\frac{x-2}{x^3}.
+    $$
+  tags: [quotient-rule, exponential]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: exp(x)*(x-2)/x**3
+    domain: x!=0
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
+---
+- id: der-quot-006
+  topic: Derivatives
+  subtopic: Quotient Rule
+  difficulty: easy
+  format: open-ended
+  statement_md_es: "Sea $y=\\dfrac{e^{x}}{1+x}$. Calcula $\\dfrac{dy}{dx}$."
+  statement_md_en: "Let $y=\\dfrac{e^{x}}{1+x}$. Compute $\\dfrac{dy}{dx}$."
+  answer_type: symbolic
+  expected_answer: e^x * x / (1+x)^2
+  accepted_equivalents:
+    - (e^x*(1+x) - e^x)/ (1+x)^2
+    - e^x*x/(1+x)^2
+  rubric:
+    total_points: 10
+    criteria:
+      - name: Quotient rule
+        points: 5
+      - name: Algebra
+        points: 3
+        description: "Cancela $(1+x)$ correctamente."
+      - name: Presentation
+        points: 2
+  hints:
+    - "$(1+x)'=1$."
+  solution_steps_md_es: |
+    $$
+    y'=\frac{e^x(1+x) - e^x}{(1+x)^2}=\frac{e^xx}{(1+x)^2}.
+    $$
+  tags: [quotient-rule, exponential]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: exp(x)*x/(1+x)**2
+    domain: x!=-1
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
