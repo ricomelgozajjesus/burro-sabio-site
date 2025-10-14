@@ -2665,7 +2665,7 @@ exercises:
         points: 2
         description: "Expresión final clara"
   hints:
-    - "Escriba $g=x\,e^{-x}$ y aplique la fórmula de Leibniz; solo contribuyen $k=0,1$."
+    - Escriba $g=x\,e^{-x}$ y aplique la fórmula de Leibniz; solo contribuyen $k=0,1$.
   tags: [Stewart, '3.2', higher-derivatives, product-rule, exponential]
   autocheck:
     strategy: symbolic_equivalence
