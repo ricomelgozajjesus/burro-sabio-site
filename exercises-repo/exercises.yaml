@@ -2676,3 +2676,39 @@ exercises:
     source: "Stewart 3.2 #42"
     created: "2025-10-14"
     updated: "2025-10-14"
+
+- id: stewart-3_2-043
+  topic: Derivatives
+  subtopic: Product & Quotient Rule (numerical evaluation)
+  difficulty: easy
+  format: open-ended
+  statement_md_es: |
+    Suponga que \(f(5)=4\), \(f'(5)=6\), \(g(5)=2\) y \(g'(5)=3\).
+    Calcule:
+    (a) \((fg)'(5)\), (b) \((f/g)'(5)\), (c) \((g/f)'(5)\).
+  answer_type: text
+  expected_answer: |
+    (a) 24
+    (b) 0
+    (c) 0
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Producto, points: 4, description: "(fg)'=f'g+fg'"}
+      - {name: Cociente, points: 4, description: "(f/g)'=(f'g-fg')/g^2 y (g/f)'=(g'f-gf')/f^2"}
+      - {name: Sustitución, points: 2, description: "Evalúa sin errores en x=5"}
+  hints:
+    - "Evalúe con \((fg)'=f'g+fg'\) y \((f/g)'=(f'g-fg')/g^2\)."
+  tags: [Stewart, '3.2', product-rule, quotient-rule, evaluation]
+  autocheck:
+    strategy: text
+    reference_expr: |
+      (a) 24
+      (b) 0
+      (c) 0
+  meta:
+    author: BS
+    source: 'Stewart 3.2 #43'
+    created: '2025-10-14'
+    updated: '2025-10-14'
+    
