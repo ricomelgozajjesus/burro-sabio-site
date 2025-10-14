@@ -2376,3 +2376,304 @@ exercises:
     created: 2025-10-13
     updated: 2025-10-13
     
+- id: stewart-3_2-001
+  topic: Derivadas
+  subtopic: Regla del producto (polinomios)
+  difficulty: easy
+  format: open-ended
+  statement_md_es: |
+    Calcule la derivada:
+    
+    $$y(x)=(x^{2}+1)(x^{3}-2x).$$
+  answer_type: symbolic
+  expected_answer: '(2x)(x^{3}-2x) + (x^{2}+1)(3x^{2}-2)'
+  accepted_equivalents:
+    - '5x^{4} - 4x^{2} + 3x^{2} - 2 = 5x^{4} - x^{2} - 2'   # (no necesario simplificar; se aceptan formas equivalentes)
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Producto, points: 6, description: "Aplica $(fg)^\prime=f^\prime g+fg^\prime$ correctamente"}
+      - {name: Simplificación, points: 2, description: "Combina términos con cuidado (opcional)"}
+      - {name: Presentación, points: 2, description: "Notación/LaTeX clara"}
+  hints:
+    - 'Identifique $f=x^2+1$, $g=x^3-2x$'
+  tags: [textbook, Stewart, '3.2', product-rule, polynomial]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: (2*x)*(x**3-2*x) + (x**2+1)*(3*x**2-2)
+    domain: all real x
+  meta:
+    source: 'Stewart Cálculo, Sección 3.2 (inspirado)'
+    author: 'Curación JJR + BS'
+    created: '2025-10-13'
+    updated: '2025-10-13'
+
+- id: stewart-3_2-031
+  topic: Derivatives
+  subtopic: Tangent Line (Rational)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    Encuentre la ecuación de la recta tangente a la curva
+    $$
+    y = \frac{x^2 - 1}{x^2 + x + 1}
+    $$
+    en el punto $(1,0)$.
+  answer_type: symbolic
+  expected_answer: 'y = \frac{3}{7}(x-1)'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Derivada, points: 6, description: "Aplica la regla del cociente"}
+      - {name: Evaluación, points: 2, description: "Evalúa f(1) y f'(1)"}
+      - {name: Presentación, points: 2, description: "Expresa la ecuación punto-pendiente"}
+  hints:
+    - 'Use $(f/g)^\prime=(f^\prime g-fg^\prime)/g^2$ con $f=x^2-1$, $g=x^2+x+1$.'
+  tags: [stewart, '3.2', tangent-line, quotient-rule]
+  autocheck:
+    strategy: numeric_sampling
+    reference_expr: (3/7)*(x-1)
+    domain: all real x
+  meta: {author: BS, source: Stewart 3.2 #31, created: '2025-10-13', updated: '2025-10-13'}
+
+- id: stewart-3_2-032
+  topic: Derivatives
+  subtopic: Tangent Line (Exponential Fraction)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    Encuentre la ecuación de la recta tangente a la curva
+    $$
+    y = \frac{1+x}{1+e^x}
+    $$
+    en el punto $(0,\tfrac{1}{2})$.
+  answer_type: symbolic
+  expected_answer: 'y = \frac{1}{4}x + \frac{1}{2}'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Cociente, points: 6, description: "Deriva y evalúa en $x=0$"}
+      - {name: Pendiente, points: 2, description: "m=f'(0)=1/4"}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'Aplica la regla del cociente y sustituye $e^0=1$.'
+  tags: [stewart, '3.2', tangent-line, exponential]
+  autocheck:
+    strategy: numeric_sampling
+    reference_expr: (1/4)*x + 1/2
+    domain: all real x
+  meta: {author: BS, source: Stewart 3.2 #32, created: '2025-10-13', updated: '2025-10-13'}
+
+- id: stewart-3_2-033
+  topic: Derivatives
+  subtopic: Tangent & Normal Lines
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    Determine las ecuaciones de las rectas tangente y normal a
+    $$
+    y = 2x e^{x}
+    $$
+    en el punto $(0,0)$.
+  answer_type: symbolic
+  expected_answer: 'T: y = 2x;\ N: y = -\tfrac{1}{2}x'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Producto, points: 5}
+      - {name: Pendiente normal, points: 3, description: "m_n = -1/m_t"}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'Derive $y^\prime=2e^x+2xe^x$ y evalúe en $x=0$.'
+  tags: [stewart, '3.2', tangent-line, normal-line, exponential]
+  autocheck:
+    strategy: numeric_sampling
+    reference_expr: 2*x  # tangent line only
+    domain: all real x
+  meta: {author: BS, source: Stewart 3.2 #33, created: '2025-10-13', updated: '2025-10-13'}
+
+- id: stewart-3_2-034
+  topic: Derivatives
+  subtopic: Tangent & Normal Lines (Rational)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    Determine las ecuaciones de las rectas tangente y normal a
+    $$
+    y = \frac{2x}{x^2+1}
+    $$
+    en el punto $(1,1)$.
+  answer_type: symbolic
+  expected_answer: 'T: y = 0x + 1;\ N: x = 1'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Derivada, points: 6, description: "f'(1)=0"}
+      - {name: Geometría, points: 2, description: "Recta normal vertical"}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'Evalúe f^\prime(1)=0 para ver que la tangente es horizontal.'
+  tags: [stewart, '3.2', tangent-line, normal-line, quotient-rule]
+  autocheck:
+    strategy: numeric_sampling
+    reference_expr: 1  # horizontal line y=1
+    domain: all real x
+  meta: {author: BS, source: Stewart 3.2 #34, created: '2025-10-13', updated: '2025-10-13'}
+
+- id: stewart-3_2-035
+  topic: Derivatives
+  subtopic: Tangent Line (Bruja de Agnesi)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    La curva $y=\frac{1}{1+x^{2}}$ se llama **bruja de María Agnesi**.
+    Encuentre la ecuación de la recta tangente en $(-1,\tfrac{1}{2})$.
+  answer_type: symbolic
+  expected_answer: 'y = x + \tfrac{3}{2}'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Derivada, points: 6}
+      - {name: Sustitución, points: 2}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'Use $y^\prime=-2x/(1+x^2)^2$.'
+  tags: [stewart, '3.2', tangent-line, rational]
+  autocheck:
+    strategy: numeric_sampling
+    reference_expr: x + 3/2
+    domain: all real x
+  meta: {author: BS, source: Stewart 3.2 #35, created: '2025-10-13', updated: '2025-10-13'}
+
+- id: stewart-3_2-036
+  topic: Derivatives
+  subtopic: Tangent Line (Serpentina)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    La **serpentina** está dada por $y=\frac{x}{1+x^{2}}$.
+    Encuentre la ecuación de la recta tangente en $(3,0.3)$.
+  answer_type: symbolic
+  expected_answer: 'y = -0.18(x-3) + 0.3'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Derivada, points: 6}
+      - {name: Sustitución, points: 2}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'y^\prime = (1+x^2 - 2x^2)/(1+x^2)^2 = (1-x^2)/(1+x^2)^2.'
+  tags: [stewart, '3.2', tangent-line, rational]
+  autocheck:
+    strategy: numeric_sampling
+    reference_expr: -0.18*(x-3)+0.3
+    domain: all real x
+  meta: {author: BS, source: Stewart 3.2 #36, created: '2025-10-13', updated: '2025-10-13'}
+
+- id: stewart-3_2-037
+  topic: Derivatives
+  subtopic: Product Rule (Exponential × Polynomial)
+  difficulty: easy
+  format: open-ended
+  statement_md_es: |
+    Si $f(x)=(x^{3}-x)e^{x}$, encuentre $f'(x)$.
+  answer_type: symbolic
+  expected_answer: 'e^{x}(x^{3}+2x^{2}-x+1)'
+  accepted_equivalents:
+    - 'e^{x}(3x^{2}-1) + (x^{3}-x)e^{x}'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Producto, points: 6}
+      - {name: Algebra, points: 2}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'Use $(uv)^\prime=u^\prime v+uv^\prime$ con $u=x^{3}-x$, $v=e^{x}$.'
+  tags: [stewart, '3.2', product-rule, exponential]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: exp(x)*(x**3 + 2*x**2 - x + 1)
+    domain: all real x
+  meta: {author: BS, source: Stewart 3.2 #37, created: '2025-10-13', updated: '2025-10-13'}
+
+- id: stewart-3_2-038
+  topic: Derivatives
+  subtopic: Product Rule (Exponential × Polynomial)
+  difficulty: easy
+  format: open-ended
+  statement_md_es: |
+    Si $f(x)=e^{x}(2x^{2}+x+1)$, determine $f'(x)$.
+  answer_type: symbolic
+  expected_answer: 'e^{x}(2x^{2}+5x+3)'
+  accepted_equivalents:
+    - 'e^{x}[(2x^{2}+x+1)+2(2x+1)]'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Producto, points: 6}
+      - {name: Simplificación, points: 2}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'f^\prime = e^{x}(2x^{2}+x+1) + e^{x}(4x+1).'
+  tags: [stewart, '3.2', product-rule, exponential]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: exp(x)*(2*x**2 + 5*x + 3)
+    domain: all real x
+  meta: {author: BS, source: Stewart 3.2 #38, created: '2025-10-13', updated: '2025-10-13'}
+
+- id: stewart-3_2-039
+  topic: Derivatives
+  subtopic: Product & Quotient (Polynomial)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    Si $f(x)=\frac{x^{2}-1}{x^{2}+1}$, determine $f'(x)$ y $f''(x)$.
+  answer_type: symbolic
+  expected_answer: 
+    first: '\frac{4x}{(x^{2}+1)^{2}}'
+    second: '\frac{4(1-3x^{2})}{(x^{2}+1)^{3}}'
+  rubric:
+    total_points: 12
+    criteria:
+      - {name: Cociente, points: 6}
+      - {name: Segunda derivada, points: 4}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'Use la regla del cociente dos veces.'
+  tags: [stewart, '3.2', quotient-rule, higher-derivatives]
+  autocheck:
+    strategy: composite
+    reference_expr:
+      first: 4*x/(x**2+1)**2
+      second: 4*(1-3*x**2)/(x**2+1)**3
+    domain: all real x
+  meta: {author: BS, source: Stewart 3.2 #39, created: '2025-10-13', updated: '2025-10-13'}
+
+- id: stewart-3_2-040
+  topic: Derivatives
+  subtopic: Product & Higher Derivatives (Exponential)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    Si $f(x)=(x^{2}-1)e^{x}$, determine $f'(x)$ y $f''(x)$.
+  answer_type: symbolic
+  expected_answer:
+    first: 'e^{x}(x^{2}+2x-1)'
+    second: 'e^{x}(x^{2}+4x+1)'
+  rubric:
+    total_points: 12
+    criteria:
+      - {name: Producto, points: 6}
+      - {name: Segunda derivada, points: 4}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'Aplique la regla del producto dos veces y simplifique.'
+  tags: [stewart, '3.2', product-rule, higher-derivatives, exponential]
+  autocheck:
+    strategy: composite
+    reference_expr:
+      first: exp(x)*(x**2 + 2*x - 1)
+      second: exp(x)*(x**2 + 4*x + 1)
+    domain: all real x
+  meta: {author: BS, source: Stewart 3.2 #40, created: '2025-10-13', updated: '2025-10-13'}
