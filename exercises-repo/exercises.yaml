@@ -2377,29 +2377,39 @@ exercises:
     updated: 2025-10-13
     
   - id: stewart-3_2-031
-    topic: Derivatives
-    subtopic: Tangent Line (Rational)
-    difficulty: medium
-    format: open-ended
-    statement_md_es: |
-      Encuentre la ecuación de la recta tangente a la curva
-      $$
-      y = \frac{x^2 - 1}{x^2 + x + 1}
-      $$
-      en el punto $(1,0)$.
-    answer_type: symbolic
-    expected_answer: 'y = \frac{3}{7}(x-1)'
-    rubric:
-      total_points: 10
+  topic: Derivatives
+  subtopic: Tangent Line (Rational)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    Encuentre la ecuación de la recta tangente a la curva
+    $$
+    y = \frac{x^2 - 1}{x^2 + x + 1}
+    $$
+    en el punto $(1,0)$.
+  answer_type: symbolic
+  expected_answer: 'y = \frac{3}{7}(x-1)'
+  rubric:
+    total_points: 10
     criteria:
-      - {name: Derivada, points: 6, description: "Aplica la regla del cociente"}
-      - {name: Evaluación, points: 2, description: "Evalúa f(1) y f'(1)"}
-      - {name: Presentación, points: 2, description: "Expresa la ecuación punto-pendiente"}
-    hints:
-      - 'Use $(f/g)^\prime=(f^\prime g-fg^\prime)/g^2$ con $f=x^2-1$, $g=x^2+x+1$.'
-    tags: [stewart, '3.2', tangent-line, quotient-rule]
-    autocheck:
+      - name: Derivada
+        points: 6
+        description: "Aplica la regla del cociente"
+      - name: Evaluación
+        points: 2
+        description: "Evalúa f(1) y f'(1)"
+      - name: Presentación
+        points: 2
+        description: "Expresa la ecuación punto-pendiente"
+  hints:
+    - "Use $(f/g)^\prime=(f^\prime g-fg^\prime)/g^2$ con $f=x^2-1$, $g=x^2+x+1$."
+  tags: [stewart, '3.2', tangent-line, quotient-rule]
+  autocheck:
     strategy: numeric_sampling
     reference_expr: (3/7)*(x-1)
     domain: all real x
-    meta: {author: BS, source: 'Stewart 3.2 #31', created: '2025-10-13', updated: '2025-10-13'}
+  meta:
+    author: BS
+    source: 'Stewart 3.2 #31'
+    created: '2025-10-13'
+    updated: '2025-10-13'
