@@ -2424,3 +2424,31 @@ exercises:
     reference_expr: 2*x  # tangent line only
     domain: all real x
   meta: {author: BS, source: 'Stewart 3.2 #33', created: '2025-10-13', updated: '2025-10-13'}
+
+- id: stewart-3_2-034
+  topic: Derivatives
+  subtopic: Tangent & Normal Lines (Rational)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    Determine las ecuaciones de las rectas tangente y normal a
+    $$
+    y = \frac{2x}{x^2+1}
+    $$
+    en el punto $(1,1)$.
+  answer_type: symbolic
+  expected_answer: 'T: y = 0x + 1;\ N: x = 1'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Derivada, points: 6, description: "f'(1)=0"}
+      - {name: Geometría, points: 2, description: "Recta normal vertical"}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'Evalúe f^\prime(1)=0 para ver que la tangente es horizontal.'
+  tags: [stewart, '3.2', tangent-line, normal-line, quotient-rule]
+  autocheck:
+    strategy: numeric_sampling
+    reference_expr: 1  # horizontal line y=1
+    domain: all real x
+  meta: {author: BS, source: Stewart 3.2 #34, created: '2025-10-13', updated: '2025-10-13'}
