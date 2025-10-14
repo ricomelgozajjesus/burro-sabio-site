@@ -1812,7 +1812,7 @@ exercises:
     author: "Curación JJR"
     created: "2025-10-05"
     updated: "2025-10-05"
-    
+
 - id: stewart-3_1-034
   topic: Derivadas
   subtopic: Recta tangente (polinomial cuadrática)
@@ -2141,7 +2141,7 @@ exercises:
     author: BS
     created: 2025-10-13
     updated: 2025-10-13
-    
+
 - id: der-quot-006
   topic: Derivatives
   subtopic: Quotient Rule
@@ -2293,7 +2293,7 @@ exercises:
     author: BS
     created: 2025-10-13
     updated: 2025-10-13
-    
+
 - id: der-quot-013
   topic: Derivatives
   subtopic: Quotient Rule (rational)
@@ -2330,76 +2330,48 @@ exercises:
     author: BS
     created: 2025-10-13
     updated: 2025-10-13
-  - id: der-prodsec-027
-      topic: Derivatives
-      subtopic: Higher Derivatives (product with exp)
-      difficulty: medium
-      format: open-ended
-      statement_md_es: "Sea $f(x)=(x^{3}+1)e^{x}$. Calcula $f'(x)$ y $f''(x)$."
-      statement_md_en: "Let $f(x)=(x^{3}+1)e^{x}$. Compute $f'(x)$ and $f''(x)$."
-      answer_type: symbolic
-      expected_answer: 
-        first: (x^3 + 3x^2 + 1) * e^x
-      second: (x^3 + 6x^2 + 6x + 1) * e^x
-      accepted_equivalents:
-        - first: e^x*(x^3 + 3x^2 + 1)
-          second: e^x*(x^3 + 6x^2 + 6x + 1)
-          rubric:
-            total_points: 12
-      criteria:
-        - name: First derivative via product rule
-          points: 4
-        - name: Second derivative correctness
-          points: 6
-        - name: Presentation
-          points: 2
-      hints:
-        - "Primero halla $f'$ con regla del producto; luego deriva de nuevo."
-        - "$(e^x)'=e^x$ en ambas ocasiones."
-      solution_steps_md_es: |
-        $$
-        f'=(3x^2)e^x + (x^3+1)e^x = (x^3+3x^2+1)e^x.
-        $$
-        $$
-        f'' = (3x^2+6x)e^x + (x^3+3x^2+1)e^x
+- id: der-prodsec-027
+  topic: Derivatives
+  subtopic: Higher Derivatives (product with exp)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: "Sea $f(x)=(x^{3}+1)e^{x}$. Calcula $f'(x)$ y $f''(x)$."
+  statement_md_en: "Let $f(x)=(x^{3}+1)e^{x}$. Compute $f'(x)$ and $f''(x)$."
+  answer_type: symbolic
+  expected_answer:
+    first: (x^3 + 3x^2 + 1) * e^x
+    second: (x^3 + 6x^2 + 6x + 1) * e^x
+  accepted_equivalents:
+    - first: e^x*(x^3 + 3x^2 + 1)
+      second: e^x*(x^3 + 6x^2 + 6x + 1)
+  rubric:
+    total_points: 12
+    criteria:
+      - name: First derivative via product rule
+        points: 4
+      - name: Second derivative correctness
+        points: 6
+      - name: Presentation
+        points: 2
+  hints:
+    - "Primero halla $f'$ con regla del producto; luego deriva de nuevo."
+    - "$(e^x)'=e^x$ en ambas ocasiones."
+  solution_steps_md_es: |
+    $$
+    f'=(3x^2)e^x + (x^3+1)e^x = (x^3+3x^2+1)e^x.
+    $$
+    $$
+    f'' = (3x^2+6x)e^x + (x^3+3x^2+1)e^x
         = (x^3 + 6x^2 + 6x + 1)e^x.
-        $$
-      tags: [product-rule, higher-derivatives, exponential]
-      autocheck:
-        strategy: composite
-        reference_expr:
-        first: (x**3 + 3*x**2 + 1)*exp(x)
-        second: (x**3 + 6*x**2 + 6*x + 1)*exp(x)
-        domain: all real x
-      meta:
-        author: BS
-        created: 2025-10-13
-        updated: 2025-10-13
-
-  - id: stewart-3_2-031
-    topic: Derivatives
-    subtopic: Tangent Line (Rational)
-    difficulty: medium
-    format: open-ended
-    statement_md_es: |
-    Encuentre la ecuación de la recta tangente a la curva
     $$
-    y = \frac{x^2 - 1}{x^2 + x + 1}
-    $$
-    en el punto $(1,0)$.
-    answer_type: symbolic
-    expected_answer: 'y = \frac{3}{7}(x-1)'
-    rubric:
-      total_points: 10
-      criteria:
-      - {name: Derivada, points: 6, description: "Aplica la regla del cociente"}
-      - {name: Evaluación, points: 2, description: "Evalúa f(1) y f'(1)"}
-      - {name: Presentación, points: 2, description: "Expresa la ecuación punto-pendiente"}
-    hints:
-      - 'Use $(f/g)^\prime=(f^\prime g-fg^\prime)/g^2$ con $f=x^2-1$, $g=x^2+x+1$.'
-    tags: [stewart, '3.2', tangent-line, quotient-rule]
-    autocheck:
-      strategy: numeric_sampling
-      reference_expr: (3/7)*(x-1)
-      domain: all real x
-     meta: {author: BS, source: 'Stewart 3.2 #31', created: '2025-10-13', updated: '2025-10-13'}
+  tags: [product-rule, higher-derivatives, exponential]
+  autocheck:
+    strategy: composite
+    reference_expr:
+      first: (x**3 + 3*x**2 + 1)*exp(x)
+      second: (x**3 + 6*x**2 + 6*x + 1)*exp(x)
+    domain: all real x
+  meta:
+    author: BS
+    created: 2025-10-13
+    updated: 2025-10-13
