@@ -2712,3 +2712,36 @@ exercises:
     created: '2025-10-14'
     updated: '2025-10-14'
     
+- id: stewart-3_2-044
+  topic: Derivatives
+  subtopic: Product & Quotient Rule (what info is needed)
+  difficulty: easy
+  format: open-ended
+  statement_md_es: |
+    Suponga que \(f'(2)=4\), \(g(2)=-3\) y \(g'(2)=5\).
+    (a) Si \(h(x)=f(x)g(x)\), halle \(h'(2)\).
+    (b) Si \(k(x)=\dfrac{f(x)}{g(x)}\), halle \(k'(2)\).
+    ¿Qué información adicional se necesita?
+  answer_type: text
+  expected_answer: |
+    (a) \(h'(2)=f'(2)g(2)+f(2)g'(2)=-12+5\,f(2)\) (se necesita \(f(2)\)).
+    (b) \(k'(2)=\dfrac{f'(2)g(2)-f(2)g'(2)}{g(2)^2}=\dfrac{-12-5\,f(2)}{9}\) (también requiere \(f(2)\)).
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Estructura correcta, points: 6, description: "Formula $h'$ y $k'$ con producto/cociente"}
+      - {name: Identifica dato faltante, points: 2, description: "Señala que hace falta $f(2)$"}
+      - {name: Presentación, points: 2, description: "Expresión clara en términos de $f(2)$"}
+  hints:
+    - "Use $(fg)' = f'g + fg'$ y $(f/g)' = (f'g - fg')/g^2$."
+  tags: [Stewart, '3.2', product-rule, quotient-rule, evaluation]
+  autocheck:
+    strategy: text
+    reference_expr: |
+      (a) h'(2) = -12 + 5 f(2)
+      (b) k'(2) = (-12 - 5 f(2)) / 9
+  meta:
+    author: BS
+    source: 'Stewart 3.2 #44'
+    created: '2025-10-14'
+    updated: '2025-10-14'
