@@ -2395,4 +2395,4 @@ exercises:
     strategy: numeric_sampling
     reference_expr: (1/4)*x + 1/2
     domain: all real x
-  meta: {author: BS, source: Stewart 3.2 #32, created: '2025-10-13', updated: '2025-10-13'}
+  meta: {author: BS, source: 'Stewart 3.2 #32', created: '2025-10-13', updated: '2025-10-13'}
