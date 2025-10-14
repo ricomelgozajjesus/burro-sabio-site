@@ -2617,7 +2617,7 @@ exercises:
   difficulty: easy
   format: open-ended
   statement_md_es: |
-    Sea \(f(x)=\dfrac{x^{2}}{1+x}\). Calcule \(f'(1)\).
+    Sea \( f(x) = \dfrac{x^{2}}{1 + x} \). Calcule \( f'(1) \).
   answer_type: symbolic
   expected_answer: '3/4'
   rubric:
