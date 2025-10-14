@@ -2396,3 +2396,31 @@ exercises:
     reference_expr: (1/4)*x + 1/2
     domain: all real x
   meta: {author: BS, source: 'Stewart 3.2 #32', created: '2025-10-13', updated: '2025-10-13'}
+
+  - id: stewart-3_2-033
+  topic: Derivatives
+  subtopic: Tangent & Normal Lines
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    Determine las ecuaciones de las rectas tangente y normal a
+    $$
+    y = 2x e^{x}
+    $$
+    en el punto $(0,0)$.
+  answer_type: symbolic
+  expected_answer: 'T: y = 2x;\ N: y = -\tfrac{1}{2}x'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Producto, points: 5}
+      - {name: Pendiente normal, points: 3, description: "m_n = -1/m_t"}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'Derive $y^\prime=2e^x+2xe^x$ y evalúe en $x=0$.'
+  tags: [stewart, '3.2', tangent-line, normal-line, exponential]
+  autocheck:
+    strategy: numeric_sampling
+    reference_expr: 2*x  # tangent line only
+    domain: all real x
+  meta: {author: BS, source: 'Stewart 3.2 #33', created: '2025-10-13', updated: '2025-10-13'}
