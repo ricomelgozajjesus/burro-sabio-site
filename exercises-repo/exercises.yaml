@@ -2357,7 +2357,7 @@ exercises:
         points: 2
         description: "Expresa la ecuación punto-pendiente"
   hints:
-    - 'Use $(f/g)' = (f' g - f g')/g^2$ con $f=x^2-1$, $g=x^2+x+1$.'
+      - 'Use $(f/g)'' = (f'' g - f g'')/g^2$ con $f=x^2-1$, $g=x^2+x+1$.'
   tags: [stewart, '3.2', tangent-line, quotient-rule]
   autocheck:
     strategy: numeric_sampling
