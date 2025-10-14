@@ -2397,7 +2397,7 @@ exercises:
     domain: all real x
   meta: {author: BS, source: 'Stewart 3.2 #32', created: '2025-10-13', updated: '2025-10-13'}
 
-  - id: stewart-3_2-033
+- id: stewart-3_2-033
   topic: Derivatives
   subtopic: Tangent & Normal Lines
   difficulty: medium
