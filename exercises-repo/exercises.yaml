@@ -2375,38 +2375,6 @@ exercises:
     author: BS
     created: 2025-10-13
     updated: 2025-10-13
-    
-- id: stewart-3_2-001
-  topic: Derivadas
-  subtopic: Regla del producto (polinomios)
-  difficulty: easy
-  format: open-ended
-  statement_md_es: |
-    Calcule la derivada:
-    
-    $$y(x)=(x^{2}+1)(x^{3}-2x).$$
-  answer_type: symbolic
-  expected_answer: '(2x)(x^{3}-2x) + (x^{2}+1)(3x^{2}-2)'
-  accepted_equivalents:
-    - '5x^{4} - 4x^{2} + 3x^{2} - 2 = 5x^{4} - x^{2} - 2'   # (no necesario simplificar; se aceptan formas equivalentes)
-  rubric:
-    total_points: 10
-    criteria:
-      - {name: Producto, points: 6, description: "Aplica $(fg)^\prime=f^\prime g+fg^\prime$ correctamente"}
-      - {name: Simplificación, points: 2, description: "Combina términos con cuidado (opcional)"}
-      - {name: Presentación, points: 2, description: "Notación/LaTeX clara"}
-  hints:
-    - 'Identifique $f=x^2+1$, $g=x^3-2x$'
-  tags: [textbook, Stewart, '3.2', product-rule, polynomial]
-  autocheck:
-    strategy: symbolic_equivalence
-    reference_expr: (2*x)*(x**3-2*x) + (x**2+1)*(3*x**2-2)
-    domain: all real x
-  meta:
-    source: 'Stewart Cálculo, Sección 3.2 (inspirado)'
-    author: 'Curación JJR + BS'
-    created: '2025-10-13'
-    updated: '2025-10-13'
 
 - id: stewart-3_2-031
   topic: Derivatives
