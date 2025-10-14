@@ -2624,7 +2624,7 @@ exercises:
     total_points: 10
   criteria:
       - {name: Regla del cociente, points: 6, description: "Aplica (u/v)'=(u'v-uv')/v^2 correctamente"}
-      - {name: Sustitución en x=1, points: 2, description: "Evalúa \(f'(1)\) sin errores"}
+      - {name: Sustitución en x=1, points: 2, description: 'Evalúa \(f''(1)\) sin errores'}
       - {name: Presentación, points: 2, description: "Notación/LaTeX clara"}
   hints:
     Use \(u=x^2\), \(v=1+x\) y \((u/v)'=(u'v-uv')/v^2\).
