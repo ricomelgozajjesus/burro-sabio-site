@@ -2698,7 +2698,7 @@ exercises:
       - {name: Cociente, points: 4, description: "(f/g)'=(f'g-fg')/g^2 y (g/f)'=(g'f-gf')/f^2"}
       - {name: Sustitución, points: 2, description: "Evalúa sin errores en x=5"}
   hints:
-    - "Evalúe con \((fg)'=f'g+fg'\) y \((f/g)'=(f'g-fg')/g^2\)."
+    - "Evalúe con $(fg)' = f'g + fg'$ y $(f/g)' = (f'g - fg')/g^2$."
   tags: [Stewart, '3.2', product-rule, quotient-rule, evaluation]
   autocheck:
     strategy: text
