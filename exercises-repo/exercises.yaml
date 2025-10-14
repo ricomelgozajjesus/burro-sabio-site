@@ -2645,10 +2645,10 @@ exercises:
   difficulty: medium
   format: open-ended
   statement_md_es: |
-    Sea \( g(x) = \dfrac{x}{e^{x}} = x\,e^{-x} \).
-    Determine una fórmula cerrada para \( g^{(n)}(x) \) (para \( n \in \mathbb{N} \)).
+    Sea $g(x)=\dfrac{x}{e^{x}}=x\,e^{-x}$.
+    Determine una fórmula cerrada para $g^{(n)}(x)$ (para $n\in\mathbb{N}$).
   answer_type: symbolic
-  expected_answer: "g^{(n)}(x)=(-1)^{n}e^{-x}(x-n)"
+  expected_answer: "$g^{(n)}(x)=(-1)^{n}e^{-x}(x-n)$"
   accepted_equivalents:
     - "(-1)^n*exp(-x)*(x-n)"
     - "exp(-x)*((-1)^n*x-(-1)^n*n)"
@@ -2660,20 +2660,19 @@ exercises:
         description: "Usa la regla del producto/Leibniz o inducción para $x e^{-x}$"
       - name: Patrón correcto
         points: 2
-        description: "Incluye factor $(-1)^n$ y término $(x-n)$"
+        description: "Incluye factor $(-1)^n$ y término $x-n$"
       - name: Presentación
         points: 2
         description: "Expresión final clara"
-  hints: |
   hints:
-  - "Escriba $g=x\,e^{-x}$ y aplique la fórmula de Leibniz; solo contribuyen $k=0,1$."
-  tags: [Stewart, '3.2', higher-derivatives, product-rule, exponential]
+    - "Escriba $g=x e^{-x}$ y aplique la fórmula de Leibniz; solo contribuyen $k=0,1$."
+  tags: [Stewart, "3.2", higher-derivatives, product-rule, exponential]
   autocheck:
     strategy: symbolic_equivalence
     reference_expr: "(-1)**n*exp(-x)*(x-n)"
     domain: all real x
   meta:
     author: BS
-    source: 'Stewart 3.2 #42'
-    created: '2025-10-14'
-    updated: '2025-10-14'
+    source: "Stewart 3.2 #42"
+    created: "2025-10-14"
+    updated: "2025-10-14"
