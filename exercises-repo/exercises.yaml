@@ -2452,3 +2452,79 @@ exercises:
     reference_expr: 1  # horizontal line y=1
     domain: all real x
   meta: {author: BS, source: 'Stewart 3.2 #34', created: '2025-10-13', updated: '2025-10-13'}
+
+- id: stewart-3_2-035
+  topic: Derivatives
+  subtopic: Tangent Line (Bruja de Agnesi)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    La curva $y=\frac{1}{1+x^{2}}$ se llama **bruja de María Agnesi**.
+    Encuentre la ecuación de la recta tangente en $(-1,\tfrac{1}{2})$.
+  answer_type: symbolic
+  expected_answer: 'y = x + \tfrac{3}{2}'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Derivada, points: 6}
+      - {name: Sustitución, points: 2}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'Use $y^\prime=-2x/(1+x^2)^2$.'
+  tags: [stewart, '3.2', tangent-line, rational]
+  autocheck:
+    strategy: numeric_sampling
+    reference_expr: x + 3/2
+    domain: all real x
+  meta: {author: BS, source: 'Stewart 3.2 #35', created: '2025-10-13', updated: '2025-10-13'}
+
+- id: stewart-3_2-036
+  topic: Derivatives
+  subtopic: Tangent Line (Serpentina)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    La **serpentina** está dada por $y=\frac{x}{1+x^{2}}$.
+    Encuentre la ecuación de la recta tangente en $(3,0.3)$.
+  answer_type: symbolic
+  expected_answer: 'y = -0.18(x-3) + 0.3'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Derivada, points: 6}
+      - {name: Sustitución, points: 2}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'y^\prime = (1+x^2 - 2x^2)/(1+x^2)^2 = (1-x^2)/(1+x^2)^2.'
+  tags: [stewart, '3.2', tangent-line, rational]
+  autocheck:
+    strategy: numeric_sampling
+    reference_expr: -0.18*(x-3)+0.3
+    domain: all real x
+  meta: {author: BS, source: 'Stewart 3.2 #36', created: '2025-10-13', updated: '2025-10-13'}
+
+- id: stewart-3_2-037
+  topic: Derivatives
+  subtopic: Product Rule (Exponential × Polynomial)
+  difficulty: easy
+  format: open-ended
+  statement_md_es: |
+    Si $f(x)=(x^{3}-x)e^{x}$, encuentre $f'(x)$.
+  answer_type: symbolic
+  expected_answer: 'e^{x}(x^{3}+2x^{2}-x+1)'
+  accepted_equivalents:
+    - 'e^{x}(3x^{2}-1) + (x^{3}-x)e^{x}'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Producto, points: 6}
+      - {name: Algebra, points: 2}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'Use $(uv)^\prime=u^\prime v+uv^\prime$ con $u=x^{3}-x$, $v=e^{x}$.'
+  tags: [stewart, '3.2', product-rule, exponential]
+  autocheck:
+    strategy: symbolic_equivalence
+    reference_expr: exp(x)*(x**3 + 2*x**2 - x + 1)
+    domain: all real x
+  meta: {author: BS, source: 'Stewart 3.2 #37', created: '2025-10-13', updated: '2025-10-13'}
