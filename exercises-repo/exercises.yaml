@@ -2368,3 +2368,31 @@ exercises:
     source: 'Stewart 3.2 #31'
     created: '2025-10-13'
     updated: '2025-10-13'
+    
+- id: stewart-3_2-032
+  topic: Derivatives
+  subtopic: Tangent Line (Exponential Fraction)
+  difficulty: medium
+  format: open-ended
+  statement_md_es: |
+    Encuentre la ecuación de la recta tangente a la curva
+    $$
+    y = \frac{1+x}{1+e^x}
+    $$
+    en el punto $(0,\tfrac{1}{2})$.
+  answer_type: symbolic
+  expected_answer: 'y = \frac{1}{4}x + \frac{1}{2}'
+  rubric:
+    total_points: 10
+    criteria:
+      - {name: Cociente, points: 6, description: "Deriva y evalúa en $x=0$"}
+      - {name: Pendiente, points: 2, description: "m=f'(0)=1/4"}
+      - {name: Presentación, points: 2}
+  hints:
+    - 'Aplica la regla del cociente y sustituye $e^0=1$.'
+  tags: [stewart, '3.2', tangent-line, exponential]
+  autocheck:
+    strategy: numeric_sampling
+    reference_expr: (1/4)*x + 1/2
+    domain: all real x
+  meta: {author: BS, source: Stewart 3.2 #32, created: '2025-10-13', updated: '2025-10-13'}
