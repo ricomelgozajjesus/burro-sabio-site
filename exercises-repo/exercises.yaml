@@ -2402,7 +2402,7 @@ exercises:
     strategy: numeric_sampling
     reference_expr: (3/7)*(x-1)
     domain: all real x
-  meta: {author: BS, source: Stewart 3.2 #31, created: '2025-10-13', updated: '2025-10-13'}
+   meta: {author: BS, source: 'Stewart 3.2 #31', created: '2025-10-13', updated: '2025-10-13'}
 
 - id: stewart-3_2-032
   topic: Derivatives
